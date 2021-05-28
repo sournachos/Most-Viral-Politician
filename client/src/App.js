@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import Signup from "./pages/Signup"
 import { Container } from "react-bootstrap"
 import { AuthProvider } from "./contexts/AuthContext"
@@ -14,7 +14,9 @@ import LoginBtn from "./components/LoginBtn"
 function App() {
   return (
     <div>
-      <Nav/>
+      <AuthProvider>
+       <Nav/> 
+      </AuthProvider>
     <Container
       className="d-flex align-items-center justify-content-center"
       style={{ minHeight: "100vh" }}
