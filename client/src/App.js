@@ -8,7 +8,7 @@ import Login from "./pages/Login"
 import PrivateRoute from "./components/PrivateRoute"
 import ForgotPassword from "./pages/ForgotPassword"
 import Nav from "./components/Nav/index"
-import Home from "./pages/Home"
+import Home from "./pages/Home" 
 import LoginBtn from "./components/LoginBtn"
 
 function App() {
