@@ -1,5 +1,5 @@
 import React from "react"
-import { Card } from "react-bootstrap"
+import { Card, Container } from "react-bootstrap"
 //import { useAuth } from "../contexts/AuthContext"
 //import { useHistory } from "react-router-dom"
 
@@ -20,26 +20,39 @@ export default function PolPRofile() {
   // }
 
   return (
-    <>
-      <Card className="w-25 mx-2 my-4">
+    <Container style={{ margin: "5%" }}> 
+
+      <div className=" d-flex my-4 ">
+        <Card className=" p-2 w-25 me-4">
+          <Card.Body>
+            <h2 className="text-center mb-4">Joe {"database"}</h2>
+          <img style={{width:"100%"}} src="https://i.imgflip.com/4cis9f.png"/> {"databaseimg"}
+          </Card.Body>
+        </Card>
+
+        <Card className=" p-2 flex-grow-1">
+          <Card.Body>
+            <h2 className="text-center mb-4">Info</h2>
+            <ul>
+            <li><strong>Name:</strong> {"database"}</li>
+            <li><strong>Location:</strong> {"database"}</li>
+            <li><strong>Party:</strong> {"database"}</li>
+            <li><strong>Term:</strong> {"database"}</li>
+            <li><strong>Bio:</strong> {"database"}</li>
+            </ul>
+          </Card.Body>
+        </Card>
+      </div>
+
+      <Card className="w-100  mb-2">
         <Card.Body>
-          <h2 className="text-center mb-4">Profile</h2>
-          <strong>Email:</strong>
-        </Card.Body>
-      </Card>
-      <Card className="w-75 mx-2 my-4">
-        <Card.Body>
-          <h2 className="text-center mb-4">Profile</h2>
-          <strong>Email: fasgagafgafga</strong> 
-        </Card.Body>
-      </Card>
-      <Card className="w-100 mx-2 mb-2">
-        <Card.Body>
-          <h2 className="text-center mb-4">Profile</h2>
-          <strong>Email: sthsrjrjhjdhfj</strong> 
+          <h2 className="text-center mb-4">Stats</h2>
+
+          {"database"}
+
         </Card.Body>
       </Card>
 
-    </>
+    </Container>
   )
 }
