@@ -1,6 +1,5 @@
 import React, {useState} from "react"
 import Signup from "./pages/Signup"
-import { Container } from "react-bootstrap"
 import { AuthProvider } from "./contexts/AuthContext"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import PolProfile from "./pages/PolProfile"
@@ -17,10 +16,7 @@ function App() {
       <AuthProvider>
        <Nav/> 
       </AuthProvider>
-    <Container
-      className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}
-    >
+
         <Router>
           <AuthProvider>
             <Switch>
@@ -35,7 +31,6 @@ function App() {
           </AuthProvider>
         </Router>
     
-    </Container>
     </div>
   ) 
 }
