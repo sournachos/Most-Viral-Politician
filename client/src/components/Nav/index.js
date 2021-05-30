@@ -24,11 +24,11 @@ export default function Nav() {
   const render =() => {
     return currentUser ?
 
-   <div className="w-25 justify-content-end mt-1">
-    <Button onClick={handleLogout} href="/home">Log Out</Button>
+   <div className="w-25 d-flex justify-content-end mt-1">
+     <Button onClick={handleLogout} href="/home">Log Out</Button>
   </div> 
   
-  : <div className="w-25 justify-content-end mt-1">
+  : <div className="w-25 d-flex justify-content-end mt-1">
       <Button href="/login">Log In</Button>
       <Button href="/signup">Sign Up</Button>
     </div>
@@ -36,7 +36,7 @@ export default function Nav() {
 
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav className="navbar navbar-dark bg-primary">
       <a className="navbar-brand" href="/">
         M<span>o</span>st V<span>i</span>r<span>a</span>l P<span>o</span>l<span>i</span>t<span>i</span>c<span>ia</span>n
       </a>
