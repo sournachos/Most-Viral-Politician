@@ -1,5 +1,6 @@
 import React from "react"
 import { Button, Card} from "react-bootstrap"
+import { List, ListItem } from "../components/List"
 //import { Link} from "react-router-dom"
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
       </Card>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">POLITICIAN LIST HERE</h2>
+          <List />
         </Card.Body>
       </Card>
 
