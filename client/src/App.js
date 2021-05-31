@@ -17,7 +17,6 @@ function App() {
       <AuthProvider>
        <Nav/> 
       </AuthProvider>
-
         <Router>
           <AuthProvider>
             
@@ -25,11 +24,11 @@ function App() {
                 <Route path="/signup" component={Signup} />
                 <Route path="/login" component={Login} />
                 <Route path="/forgot-password" component={ForgotPassword} />
-              <Container style={{ margin: "5%" }}>
+              
                 <PrivateRoute exact path="/" component={Home} />
                 <Route path="/home" component={Home} />
                 <Route path="/polprofile" component={PolProfile} />
-              </Container>
+              
               </Switch>
             
           </AuthProvider>
