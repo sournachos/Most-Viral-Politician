@@ -6,7 +6,7 @@ function Map(props) {
   return (
      <>
      <div>pizza</div>
-  <svg xmlns="http://www.w3.org/2000/svg" width="200em" height="200em" {...props}>
+  <svg xmlns="http://www.w3.org/2000/svg" width="49em" height="47em" {...props}>
       <g
         fontSize={34.375}
         fontWeight={400}
