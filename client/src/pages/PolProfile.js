@@ -20,8 +20,8 @@ export default function PolPRofile() {
   // }
 
   return (
-    <Container style={{ margin: "5%" }}> 
-
+    
+    <>
       <div className=" d-flex my-4 ">
         <Card className=" p-2 w-25 me-4">
           <Card.Body>
@@ -53,6 +53,6 @@ export default function PolPRofile() {
         </Card.Body>
       </Card>
 
-    </Container>
+    </>
   )
 }

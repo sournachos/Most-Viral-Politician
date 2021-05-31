@@ -9,6 +9,7 @@ import ForgotPassword from "./pages/ForgotPassword"
 import Nav from "./components/Nav/index"
 import Home from "./pages/Home" 
 import LoginBtn from "./components/LoginBtn"
+import { Container } from "react-bootstrap"
 
 function App() {
   return (
@@ -19,18 +20,20 @@ function App() {
 
         <Router>
           <AuthProvider>
-            <Switch>
-              <Route path="/signup" component={Signup} />
-              <Route path="/login" component={Login} />
-              <Route path="/forgot-password" component={ForgotPassword} />
+            <Container style={{ margin: "5%" }}> 
+              <Switch>
+                <Route path="/signup" component={Signup} />
+                <Route path="/login" component={Login} />
+                <Route path="/forgot-password" component={ForgotPassword} />
 
-              <PrivateRoute exact path="/" component={Home} />
-              <Route path="/home" component={Home} />
-              <Route path="/polprofile" component={PolProfile} />
-            </Switch>
+                <PrivateRoute exact path="/" component={Home} />
+                <Route path="/home" component={Home} />
+                <Route path="/polprofile" component={PolProfile} />
+              </Switch>
+            </Container>
           </AuthProvider>
         </Router>
-    
+      
     </div>
   ) 
 }
