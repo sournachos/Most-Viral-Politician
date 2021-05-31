@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function SvgIcon(props) {
+function Map(props) {
   console.log('pizza')
   return (
      <>
@@ -65,4 +65,4 @@ function SvgIcon(props) {
 
 }
 
-export default SvgIcon;
+export default Map;
