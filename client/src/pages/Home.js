@@ -5,15 +5,14 @@ import Map from "../components/Map"
 //import { Link} from "react-router-dom"
 
 const red = "#953738";
-const tan = "#ddd799";
-const tan2 = "#e3dfb0";
+const tan = "#e3dfb0";
 const light = "#F1EACA";
 const lightblue = "#0A6281";
 const blue = "#0B406F";
 
 const styles = {
   map: {
-    backgroundColor: tan2
+    backgroundColor: tan
   }
 }
 

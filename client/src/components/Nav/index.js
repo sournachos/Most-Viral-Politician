@@ -25,7 +25,7 @@ export default function Nav() {
     return currentUser ?
 
    <div className="w-25 d-flex justify-content-end">
-     <Button onClick={handleLogout} href="/home" className="navbtn" id="logout">Log <span>Out</span></Button>
+     <Button onClick={handleLogout} href="/home" className="navbtn" id="logout"><span id="log">Log</span> <span id="out">Out</span></Button>
   </div> 
   
   : <div className="w-25 d-flex justify-content-end">
