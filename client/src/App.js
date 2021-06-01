@@ -20,7 +20,6 @@ const blue = "#0B406F";
 
 const styles = {
   body: {
-    backgroundColor: light,
     margin: "5%"
   }
   

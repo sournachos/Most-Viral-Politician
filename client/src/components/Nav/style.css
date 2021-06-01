@@ -2,9 +2,6 @@ nav {
   background-color: var(--color-dark) !important;
 }
 
-nav a {
-  
-}
 .navbar-brand {
   color: var(--color-blue-nav) !important;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -19,7 +16,6 @@ nav a {
 
 .navbtn {
   background-color: var(--color-dark) !important;
-  /* color: var(--color-light) !important; */
   color: var(--color-light) !important;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
   font-size: 18px !important;
@@ -37,17 +33,6 @@ nav a {
   color: var(--color-tan) !important;
 }
 
-/* #logout:hover {
-  background-color: var(--color-tan) !important;
-}
-
-#logout:hover #log {
-  color: var(--color-red) !important;
-}
-
-#logout:hover #out {
-  color: var(--color-blue) !important;
-} */
 #logout:hover {
   background-color: var(--color-dark2) !important;
 }
