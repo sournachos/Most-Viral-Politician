@@ -17,7 +17,6 @@ function App() {
       <AuthProvider>
        <Nav/> 
       </AuthProvider>
-
         <Router>
           <AuthProvider>
             

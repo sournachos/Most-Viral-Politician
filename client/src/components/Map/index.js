@@ -4,7 +4,6 @@ import "./style.css";
 function Map(props) {
   return (
      <>
-     <div>pizza</div>
   <svg xmlns="http://www.w3.org/2000/svg" width="50em" height="50em" {...props}>
       <g
         fontSize={34.375}
