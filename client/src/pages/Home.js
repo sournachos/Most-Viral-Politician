@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
 
-      <div className="mb-5 mw-100 rounded" style={{ width: "fit-content", height: "fit-content", border:"1.5px solid gray"}}>
+      <div className="mb-5 mw-100 rounded" style={{ width: "fit-content", height: "fit-content", border:"1.5px solid gray", overflow:"auto"}}>
         <TransformWrapper
           defaultScale={1}
           defaultPositionX={200}
