@@ -5,7 +5,7 @@ function Map(props) {
   return (
      <>
   
-  <svg xmlns="http://www.w3.org/2000/svg" width="50em" height="47em" {...props}>
+  <svg src="http://www.w3.org/2000/svg" width="50em" height="47em" {...props}>
       <g
         fontSize={34.375}
         fontWeight={400}
