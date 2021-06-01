@@ -1,33 +1,52 @@
-
-
-:root {
-  --color-light1: #D2D8B9;
-  --color-light2: #90BF9A;
-  --color-dark1: #181A25;
-  --color-dark2: #232B28;
-  --color-med: #435F3B;
-
-  --color-red: #953738;
-  --color-tan: #ddd799;
-  --color-tan2: #e3dfb0;
-  --color-light: #F1EACA;
-  --color-lightblue: #0A6281;
-  --color-blue: #0B406F;
-}
-
 nav {
-  background-color: var(--color-tan2) !important;
+  background-color: var(--color-dark) !important;
 }
 
 nav a {
-  color: var(--color-blue) !important;
+  
+}
+.navbar-brand {
+  color: var(--color-blue-light) !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 20px;
 }
 
-span {
-  color: var(--color-red);
+.navspan {
+  font-size: 28px;
+  color: var(--color-red-light);
 }
 
 .navbtn {
-  background-color: var(--color-tan2) !important;
+  background-color: var(--color-dark) !important;
+  /* color: var(--color-light) !important; */
+  color: var(--color-blue-light) !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+  font-size: 18px !important;
+  font-weight: 550 !important;
   border-style: none !important;
 }
+
+#login:hover {
+  background-color: var(--color-blue) !important;
+  color: var(--color-tan2) !important;
+}
+
+#signup:hover {
+  background-color: var(--color-red) !important;
+  color: var(--color-tan2) !important;
+}
+
+#logout:hover {
+  background-color: var(--color-tan2) !important;
+  color: var(--color-blue) !important;
+  
+}
+
+#logout:hover span {
+  color: var(--color-red) !important;
+}
+/* 
+.navbtn:hover a {
+  
+} */

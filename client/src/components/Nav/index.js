@@ -25,12 +25,12 @@ export default function Nav() {
     return currentUser ?
 
    <div className="w-25 d-flex justify-content-end">
-     <Button onClick={handleLogout} href="/home" className="navbtn">Log Out</Button>
+     <Button onClick={handleLogout} href="/home" className="navbtn" id="logout">Log <span>Out</span></Button>
   </div> 
   
   : <div className="w-25 d-flex justify-content-end">
-      <Button href="/login" className="navbtn">Log In</Button>
-      <Button href="/signup" className="navbtn">Sign Up</Button>
+      <Button href="/login" className="navbtn" id="login">Log In</Button>
+      <Button href="/signup" className="navbtn" id="signup">Sign Up</Button>
     </div>
   }
 
@@ -38,7 +38,7 @@ export default function Nav() {
   return (
     <nav className="navbar navbar-dark">
       <a className="navbar-brand" href="/">
-        M<span>o</span>st V<span>i</span>r<span>a</span>l P<span>o</span>l<span>i</span>t<span>i</span>c<span>ia</span>n
+        <span class="navspan">M</span>ost <span class="navspan">V</span>iral <span class="navspan">P</span>olitician
       </a>
       
     {render()}
