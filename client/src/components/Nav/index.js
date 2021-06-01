@@ -24,13 +24,13 @@ export default function Nav() {
   const render =() => {
     return currentUser ?
 
-   <div className="w-25 d-flex justify-content-end mt-1">
-     <Button onClick={handleLogout} href="/home">Log Out</Button>
+   <div className="w-25 d-flex justify-content-end">
+     <Button onClick={handleLogout} href="/home" className="navbtn">Log Out</Button>
   </div> 
   
-  : <div className="w-25 d-flex justify-content-end mt-1">
-      <Button href="/login">Log In</Button>
-      <Button href="/signup">Sign Up</Button>
+  : <div className="w-25 d-flex justify-content-end">
+      <Button href="/login" className="navbtn">Log In</Button>
+      <Button href="/signup" className="navbtn">Sign Up</Button>
     </div>
   }
 

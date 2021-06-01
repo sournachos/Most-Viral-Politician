@@ -11,13 +11,24 @@ import Home from "./pages/Home"
 import LoginBtn from "./components/LoginBtn"
 //import { Container } from "react-bootstrap"
 
+const red = "#953738";
+const tan = "#ddd799";
+const tan2 = "#e3dfb0"
+const light = "#F1EACA";
+const lightblue = "#0A6281";
+const blue = "#0B406F";
+
 const styles = {
-  background: "#F5DCC3"
+  body: {
+    backgroundColor: light,
+    margin: "5%"
+  }
+  
 }
 
 function App() {
   return (
-    <div style={styles}>
+    <div>
       <AuthProvider>
        <Nav/> 
       </AuthProvider>
@@ -28,7 +39,7 @@ function App() {
                 <Route path="/signup" component={Signup} />
                 <Route path="/login" component={Login} />
                 <Route path="/forgot-password" component={ForgotPassword} />
-              <div style={{ margin: "5%" }}>
+              <div style={styles.body}>
                 <PrivateRoute exact path="/" component={Home} />
                 <Route path="/home" component={Home} />
                 <Route path="/polprofile" component={PolProfile} />

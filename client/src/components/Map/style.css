@@ -1,3 +1,9 @@
+:root {
+  --color-red: #953738;
+  --color-blue: #0B406F;
+}
+
+
 path:hover {
-    fill: red;
+    fill: var(--color-blue);
   }
