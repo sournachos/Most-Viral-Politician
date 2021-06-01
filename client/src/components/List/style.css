@@ -1,3 +1,17 @@
+.polImg {
+  height: 100px;
+  object-fit: contain;
+}
+
+.listNum {
+  color: black;
+  
+}
+
+.polName {
+  color: black;
+}
+
 .list-overflow-container {
   max-height: 545px;
   border: 1px #DDDDDD solid;
