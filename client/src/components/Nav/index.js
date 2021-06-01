@@ -36,7 +36,7 @@ export default function Nav() {
 
 
   return (
-    <nav className="navbar navbar-dark bg-primary">
+    <nav className="navbar navbar-dark">
       <a className="navbar-brand" href="/">
         M<span>o</span>st V<span>i</span>r<span>a</span>l P<span>o</span>l<span>i</span>t<span>i</span>c<span>ia</span>n
       </a>

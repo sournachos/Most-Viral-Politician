@@ -11,9 +11,13 @@ import Home from "./pages/Home"
 import LoginBtn from "./components/LoginBtn"
 //import { Container } from "react-bootstrap"
 
+const styles = {
+  background: "#F5DCC3"
+}
+
 function App() {
   return (
-    <div>
+    <div style={styles}>
       <AuthProvider>
        <Nav/> 
       </AuthProvider>
