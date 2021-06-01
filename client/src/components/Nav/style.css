@@ -1,3 +1,44 @@
-span {
-  color: #d3130c;
+nav {
+  background-color: var(--color-dark) !important;
+}
+
+.navbar-brand {
+  color: var(--color-blue-nav) !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.navspan {
+  font-size: 28px;
+  color: var(--color-red-nav);
+}
+
+.navbtn {
+  background-color: var(--color-dark) !important;
+  color: var(--color-light) !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+  font-size: 18px !important;
+  font-weight: 550 !important;
+  border-style: none !important;
+}
+
+#login:hover {
+  background-color: var(--color-blue) !important;
+  color: var(--color-tan) !important;
+}
+
+#signup:hover {
+  background-color: var(--color-red) !important;
+  color: var(--color-tan) !important;
+}
+
+#logout:hover {
+  background-color: var(--color-dark2) !important;
+}
+#logout:hover #log{
+  color: var(--color-blue-nav) !important;
+}
+#logout:hover #out {
+  color: var(--color-red-nav) !important;
 }
