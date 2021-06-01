@@ -5,27 +5,34 @@ import "./style.css";
 
 export function List({ children }) {
   return (
-      <ul className="list-group">
-        <ListItem />
-      </ul>
+    <ul className="list-group">
+      <ListItem />
+    </ul>
   );
 }
 
 export function ListItem({ children }) {
+
+const default ="far fa-star";
+
+ function toggle(default){
+   if(default==="far fa-star"){}
+  }
+
   return (
     <li className="list-group-item">
       <a className="text-decoration-none" href="/polprofile">
         <div className="d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center">
             <h1 className="bold d-inline listNum mr-3">1</h1>
-            <img className="polImg d-inline" src="https://i.imgflip.com/4cis9f.png"/>
+            <img className="polImg d-inline" src="https://i.imgflip.com/4cis9f.png" />
           </div>
-          
-          <h4 className="polName">Joe Biden</h4>
 
+          <h4 className="polName">Joe Biden</h4>
+          <a className={default}></a>
         </div>
       </a>
-    
+
     </li>
   )
 }
