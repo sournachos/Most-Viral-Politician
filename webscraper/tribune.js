@@ -1,29 +1,14 @@
-const puppeteer = require('puppeteer');
+const axios = require("axios").default;
+const cheerio = require("cheerio")
 
-async function getHouseLinks () {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.goto('https://www.texastribune.org/directory/#txhouse');
 
-  const result = await page.evaluate(() => {
-        setTimeout(() => {
-            const table = document.querySelectorAll("[role='rowgroup']")
-            let links = table[0].getElementsByTagName('a')
-    
-            output = []
-    
-            for (x of links){
-                output.push(x.href)
-            }
-            return output
+const scrape = async () => {
+    const { data } = await axios.get('https://www.texastribune.org/directory/#txhouse');
+    const $ = cheerio.load(data)
 
-        }, 4000)
-  })
+    const result = $('#concierge').find('a')
 
-  return result
-
+    console.log(result)
 }
 
-bois = getHouseLinks()
-
-console.log(bois)
+scrape()
