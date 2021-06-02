@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import { useAuth } from "../../contexts/AuthContext"
 
 // This file exports both the List and ListItem components
 
@@ -12,12 +13,12 @@ export function List({ children }) {
 }
 
 export function ListItem({ children }) {
+  const {currentUser} = useAuth()
 
-const default ="far fa-star";
+  const favoritePol = () => {
+    return currentUser ? <div><p className="mb-0" style={{color:"black"}}>Favorite</p><input type="checkbox" className="ms-4" onClick="favIt(star, def)" style={{cursor:"copy"}}></input></div> : <></>
+  };
 
- function toggle(default){
-   if(default==="far fa-star"){}
-  }
 
   return (
     <li className="list-group-item">
@@ -29,9 +30,12 @@ const default ="far fa-star";
           </div>
 
           <h4 className="polName">Joe Biden</h4>
-          <a className={default}></a>
+
+          {favoritePol()}
+
         </div>
       </a>
+      
 
     </li>
   )
