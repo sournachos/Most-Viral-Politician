@@ -1,0 +1,26 @@
+.map-box { 
+  width: "fit-content"; height: "fit-content";
+  border: 1px solid var(--color-dark);
+  overflow:"auto";
+  background-color: var(--color-light);
+}
+.tools {
+  z-index: 2;
+}
+.map {
+  z-index: 1;
+}
+.zoom {
+  border: 1px var(--color-dark2) solid;
+  border-radius: 4px;
+  background-color: var(--color-light);
+}
+
+.zoom:hover {
+  background-color: var(--color-dark2);
+  color: var(--color-light);
+}
+
+.zoom:hover i {
+  color: var(--color-light);
+}
