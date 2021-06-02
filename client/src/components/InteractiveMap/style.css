@@ -12,8 +12,15 @@
   height: "fit-content";
   border: 1px solid var(--color-dark);
   overflow:"auto";
-  background-color: rgb(235, 235, 235);
+  background-color: var(--color-light-grey);
 }
+.map-head {
+  color: var(--color-light);
+}
+
+/* .map-head i {
+  display: inline-block;
+} */
 
 .zoom {
   border: 1px var(--color-dark2) solid;

@@ -1,25 +1,33 @@
+* {
+  font-family: 'Heebo', sans-serif;
+}
+
 nav {
   background-color: var(--color-dark) !important;
 }
 
 .navbar-brand {
   color: var(--color-blue-nav) !important;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-style: italic;
-  font-size: 20px;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-style: italic !important;
+  font-weight: 700 !important;
+  font-size: 22px !important;
 }
 
 .navspan {
-  font-size: 28px;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 30px;
   color: var(--color-red-nav);
 }
 
 .navbtn {
   background-color: var(--color-dark) !important;
   color: var(--color-light) !important;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-  font-size: 18px !important;
-  font-weight: 550 !important;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 17px !important;
+  /* font-style: italic !important; */
+  font-weight: 500 !important;
   border-style: none !important;
 }
 
@@ -41,4 +49,8 @@ nav {
 }
 #logout:hover #out {
   color: var(--color-red-nav) !important;
+}
+
+.navbar-brand:hover {
+  background-color: var(--color-dark2) !important;
 }
