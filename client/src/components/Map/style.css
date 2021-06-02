@@ -1,3 +1,33 @@
-path:hover {
-    fill: red;
-  }
+:root {
+  --color-red: #953738;
+  --color-blue: #0B406F;
+  --color-tan: #e3dfb0;
+  --color-light: #F1EACA;
+  --color-red-light: rgb(188,140,117);
+  --color-red-nav: rgb(204, 89, 79);
+  --color-blue-light: rgb(120, 144, 144);
+  --color-blue-nav: rgb(100, 122, 142);
+  --color-dark: rgb(34, 34, 34);
+  --color-dark2: rgb(49, 49, 49);
+}
+
+body {
+  background-color: var(--color-light);
+}
+
+.republican {
+  fill: var(--color-red);
+}
+
+.republican:hover {
+  fill: var(--color-red-light);
+}
+
+.democrat {
+  fill: var(--color-blue);
+}
+
+.democrat:hover {
+  fill: var(--color-blue-light);
+}
+

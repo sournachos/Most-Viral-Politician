@@ -1,0 +1,58 @@
+.react-transform-element {
+  text-align:center;
+  width: 1500px;
+  height: 1000px;
+}
+
+
+
+
+.map { 
+  width: "fit-content";
+  height: "fit-content";
+  border: 1px solid var(--color-dark);
+  overflow:"auto";
+  background-color: rgb(235, 235, 235);
+}
+
+.zoom {
+  border: 1px var(--color-dark2) solid;
+  border-radius: 4px;
+  background-color: var(--color-light);
+}
+
+.tools {
+  border-bottom: 1px var(--color-dark2) solid;
+  background-color: var(--color-dark);
+}
+
+#zoom-in:hover {
+  background-color: var(--color-red);
+  color: var(--color-light);
+}
+
+#zoom-out:hover {
+  background-color: var(--color-blue);
+  color: var(--color-light);
+}
+
+#zoom-in:hover i{
+  background-color: var(--color-red);
+  color: var(--color-light);
+}
+
+#zoom-out:hover i{
+  background-color: var(--color-blue);
+  color: var(--color-light);
+}
+
+
+#zoom-reset:hover {
+  background-color: var(--color-dark2);
+  color: var(--color-light);
+}
+.zoom:hover i {
+  color: var(--color-light);
+}
+
+
