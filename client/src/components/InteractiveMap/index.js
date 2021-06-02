@@ -25,7 +25,7 @@ export default function InteractiveMap() {
         
 
               </div>
-              <div className="map">
+              <div className="map" style={{overflow: "auto"}}>
                 <TransformComponent>
                   <Map />
                 </TransformComponent>
