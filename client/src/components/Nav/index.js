@@ -37,7 +37,7 @@ export default function Nav() {
 
   return (
     <nav className="navbar navbar-dark">
-      <a className="navbar-brand" href="/">
+      <a className="navbar-brand px-2 rounded" href="/">
         <span class="navspan">M</span>ost <span class="navspan">V</span>iral <span class="navspan">P</span>olitician
       </a>
       

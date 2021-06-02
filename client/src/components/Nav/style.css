@@ -42,3 +42,7 @@ nav {
 #logout:hover #out {
   color: var(--color-red-nav) !important;
 }
+
+.navbar-brand:hover {
+  background-color: var(--color-dark2) !important;
+}
