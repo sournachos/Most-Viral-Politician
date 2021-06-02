@@ -15,37 +15,38 @@ export default function InteractiveMap() {
         >
           {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
             <React.Fragment>
-              
-              <div className="tools d-flex flex-row justify-content-between align-items-center p-2" >
-                <div class="map-head display-inline">
-                  <h5 className="mr-5 my-0 display-inline">
-                    U.S. Congressional Districts – Texas<span className="ml-3"><i className="fas fa-info-circle display-inline-block"></i></span>
-                  </h5>
-                  
+              <div className="container-fluid">
+                <div className="tools row d-flex flex-row justify-content-between align-items-center p-2" >
+                  <div class="map-head display-inline col-md-6 col-sm-7 col-8 d-flex justify-content-between">
+                    <h5 className="my-0 display-inline">
+                      U.S. Congressional Districts – Texas<span className="ml-3"><i className="fas fa-info-circle display-inline-block"></i></span>
+                    </h5>
                     
+                  </div>
+
+                  <div className="col-md-6 col-sm-5 col-4">
+                    <div className="row justify-content-end">
+                        <button onClick={zoomOut} className="zoom col-md-2 col-sm-3 col-3 p-0" id="zoom-out"><i className="fas fa-search-minus" ></i></button>
+                        <button onClick={zoomIn} className="zoom col-md-2 col-sm-3 col-3 p-0" id="zoom-in"><i className="fas fa-search-plus" ></i></button>
+               
+                      
+                      <button onClick={resetTransform} className="zoom col-md-3 col-sm-5 col-5 p-0" id="zoom-reset">Reset</button>
+                    </div>
+
+                  </div>
                   
                   
-                </div>
+          
 
-                <div>
-              
-                  <button onClick={zoomOut} className="zoom" id="zoom-out"><i className="fas fa-search-minus" ></i></button>
-                  <button onClick={zoomIn} className="zoom" id="zoom-in"><i className="fas fa-search-plus" ></i></button>
-                  <button onClick={resetTransform} className="zoom ml-5" id="zoom-reset">Reset</button>
+                </div>
+                <div className="map" style={{overflow: "auto"}}>
+                  <TransformComponent>
+                    <Map />
+                  </TransformComponent>
                 </div>
                 
-                
-        
 
               </div>
-              <div className="map" style={{overflow: "auto"}}>
-                <TransformComponent>
-                  <Map />
-                </TransformComponent>
-              </div>
-                
-
-                
             </React.Fragment>
           )}
         </TransformWrapper>
