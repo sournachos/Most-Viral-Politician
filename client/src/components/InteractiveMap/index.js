@@ -15,12 +15,12 @@ export default function InteractiveMap() {
           {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
             <React.Fragment>
               
-              <div className="tools d-flex flex-row justify-content-start align-items-center" >
-                <div className="mr-4 ml-2">
-                  <button onClick={resetTransform} className="zoom">Reset</button>
+              <div className="tools d-flex flex-row justify-content-center align-items-center p-2" >
+                <div className="mr-4">
+                  <button onClick={resetTransform} className="zoom" id="zoom-reset">Reset</button>
                 </div>
-                <button onClick={zoomOut} className="zoom"><i className="fas fa-search-minus"></i></button>
-                <button onClick={zoomIn} className="zoom"><i className="fas fa-search-plus"></i></button>
+                <button onClick={zoomOut} className="zoom" id="zoom-out"><i className="fas fa-search-minus" ></i></button>
+                <button onClick={zoomIn} className="zoom" id="zoom-in"><i className="fas fa-search-plus" ></i></button>
                 
         
 

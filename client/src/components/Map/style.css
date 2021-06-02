@@ -11,6 +11,10 @@
   --color-dark2: rgb(49, 49, 49);
 }
 
+body {
+  background-color: var(--color-light);
+}
+
 .republican {
   fill: var(--color-red);
 }
