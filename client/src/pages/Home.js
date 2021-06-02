@@ -10,16 +10,12 @@ const light = "#F1EACA";
 const lightblue = "#0A6281";
 const blue = "#0B406F";
 
-
-
 export default function Home() {
   return (
     <>
-
-      <InteractiveMap />
-
       <Card>
         <Card.Body>
+        <InteractiveMap />
           <List />
         </Card.Body>
       </Card>

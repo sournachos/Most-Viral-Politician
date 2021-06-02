@@ -1,5 +1,15 @@
-.map-box { 
-  width: "fit-content"; height: "fit-content";
+.react-transform-element {
+  text-align:center;
+  width: 1500px;
+  height: 1000px;
+}
+
+
+
+
+.map { 
+  width: "fit-content";
+  height: "fit-content";
   border: 1px solid var(--color-dark);
   overflow:"auto";
   background-color: var(--color-light-grey);
@@ -8,10 +18,6 @@
   color: var(--color-light);
   font-size: 16px
 }
-
-/* .map-head i {
-  display: inline-block;
-} */
 
 .zoom {
   border: 1px var(--color-dark2) solid;
