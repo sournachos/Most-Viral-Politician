@@ -8,7 +8,7 @@ import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 export default function Home() {
   return (
     <>
-
+  <Map />
       <div className="mb-5 mw-100 rounded" style={{ width: "fit-content", height: "fit-content", border:"1.5px solid gray"}}>
         <TransformWrapper
           defaultScale={1}
@@ -20,7 +20,7 @@ export default function Home() {
 
               <TransformComponent >
 
-                <Map />
+              
 
               </TransformComponent>
 
