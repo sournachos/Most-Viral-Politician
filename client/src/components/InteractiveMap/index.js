@@ -11,15 +11,20 @@ export default function InteractiveMap() {
           defaultPositionX={200}
           defaultPositionY={100}
           wheel={{ disabled: true }}
-          options={{ minScale: 0.98 }}
+          options={{ minScale: 0.50 }}
         >
           {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
             <React.Fragment>
               
               <div className="tools d-flex flex-row justify-content-between align-items-center p-2" >
-                <div class="map-head">
-                  <h5 className="mr-5 my-0">U.S. Congressional Districts – Texas</h5>
-                  <i class="fas fa-info-circle"></i>
+                <div class="map-head display-inline">
+                  <h5 className="mr-5 my-0 display-inline">
+                    U.S. Congressional Districts – Texas<span className="ml-3"><i className="fas fa-info-circle display-inline-block"></i></span>
+                  </h5>
+                  
+                    
+                  
+                  
                 </div>
 
                 <div>
