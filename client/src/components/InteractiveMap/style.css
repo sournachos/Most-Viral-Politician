@@ -4,6 +4,13 @@
   overflow:"auto";
   background-color: var(--color-light-grey);
 }
+.map-head {
+  color: var(--color-light);
+}
+
+.map-head i {
+  display: inline-block;
+}
 
 .zoom {
   border: 1px var(--color-dark2) solid;
