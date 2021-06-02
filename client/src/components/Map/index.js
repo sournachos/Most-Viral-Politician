@@ -3,9 +3,8 @@ import "./style.css";
 
 function Map(props) {
   return (
-     <>
-  
-  <svg src="http://www.w3.org/2000/svg" width="50em" height="47em" {...props}>
+     <>  
+  <svg src="http://www.w3.org/2000/svg" width="100%" height="100%" {...props}>
       <g
         fontSize={34.375}
         fontWeight={400}
@@ -56,10 +55,7 @@ function Map(props) {
       </g>
     </svg>
      </>
-   
-  
   );
-
 }
 
 export default Map;
