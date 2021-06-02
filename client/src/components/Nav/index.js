@@ -29,15 +29,15 @@ export default function Nav() {
   </div> 
   
   : <div className="w-25 d-flex justify-content-end">
-      <Button href="/login" className="navbtn" id="login">Log In</Button>
-      <Button href="/signup" className="navbtn" id="signup">Sign Up</Button>
+      <Button href="/login" className="navbtn" id="login"><span>Log In</span></Button>
+      <Button href="/signup" className="navbtn" id="signup"><span>Sign Up</span></Button>
     </div>
   }
 
 
   return (
     <nav className="navbar navbar-dark">
-      <a className="navbar-brand" href="/">
+      <a className="navbar-brand px-2 rounded" href="/">
         <span class="navspan">M</span>ost <span class="navspan">V</span>iral <span class="navspan">P</span>olitician
       </a>
       
