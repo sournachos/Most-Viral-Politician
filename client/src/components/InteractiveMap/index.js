@@ -1,5 +1,5 @@
 import React from "react";
-import Map from "../Map"
+import Map from "../Map";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import "./style.css";
 
@@ -15,18 +15,24 @@ export default function InteractiveMap() {
           {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
             <React.Fragment>
               
-              <TransformComponent >
-                <Map />
-              </TransformComponent>
+              <div className="tools d-flex flex-row justify-content-start align-items-center" >
+                <div className="mr-4 ml-2">
+                  <button onClick={resetTransform} className="zoom">Reset</button>
+                </div>
+                <button onClick={zoomOut} className="zoom"><i className="fas fa-search-minus"></i></button>
+                <button onClick={zoomIn} className="zoom"><i className="fas fa-search-plus"></i></button>
+                
+        
 
-              <div className="tools d-flex justify-content-end my-2 mr-2" >
-                <div className="mr-5">
-                  <button onClick={zoomOut} className="zoom mr-1"><i className="fas fa-search-minus"></i></button>
-                  <button onClick={zoomIn} className="zoom"><i className="fas fa-search-plus"></i></button>
-                </div>              
-                <button onClick={resetTransform} className="zoom">Reset</button>
               </div>
+              <div className="map">
+                <TransformComponent>
+                  <Map />
+                </TransformComponent>
+              </div>
+                
 
+                
             </React.Fragment>
           )}
         </TransformWrapper>
