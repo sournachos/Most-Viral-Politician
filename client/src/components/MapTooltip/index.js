@@ -23,7 +23,7 @@ export default function MapTooltip() {
         <button
           variant="light"
           {...triggerHandler}
-          className="d-inline-flex align-items-center py-1 px-2 map-tooltip-button"
+          className="map-tooltip-button p-0 w-100"
           ref={ref}
         >
           <i className="fas fa-info-circle display-inline-block"></i>
