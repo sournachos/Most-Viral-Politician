@@ -32,3 +32,6 @@ body {
   fill: var(--color-blue-light);
 }
 
+svg{
+  min-width: 30vw;
+}
