@@ -21,13 +21,15 @@ export default function InteractiveMap() {
           <React.Fragment>
             <div className="container-fluid">
               <div className="tools row d-flex flex-row justify-content-between align-items-center p-2" >
-                <div class="map-head display-inline col-md-6 col-sm-7 col-8 d-flex justify-content-between">
+                <div class="map-head display-inline col-md-4 col-sm-5 col-6 d-flex justify-content-between">
                   <h5 className="my-0 display-inline me-3">
                     <span className="me-3">U.S. Congressional Districts – Texas</span>
-                    <MapTooltip />
+                    
                   </h5>
                 </div>
-
+                <div className="col-2">
+                  <MapTooltip />
+                </div>
                 <div className="col-md-6 col-sm-5 col-4">
                   <div className="row justify-content-end">
                     <button onClick={zoomOut} className="zoom col-md-2 col-sm-3 col-3 p-0" id="zoom-out"><i className="fas fa-search-minus" ></i></button>

@@ -20,14 +20,14 @@ export default function MapTooltip() {
       }
     >
       {({ ref, ...triggerHandler }) => (
-        <Button
+        <button
           variant="light"
           {...triggerHandler}
           className="d-inline-flex align-items-center py-1 px-2 map-tooltip-button"
           ref={ref}
         >
           <i className="fas fa-info-circle display-inline-block"></i>
-        </Button>
+        </button>
       )}
     </OverlayTrigger>
   )
