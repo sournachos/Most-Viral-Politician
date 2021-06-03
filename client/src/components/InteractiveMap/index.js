@@ -21,22 +21,27 @@ export default function InteractiveMap() {
           <React.Fragment>
             <div className="container-fluid">
               <div className="tools row d-flex flex-row justify-content-between align-items-center p-2" >
-                <div class="map-head display-inline col-md-4 col-sm-5 col-6 d-flex justify-content-between">
-                  <h5 className="my-0 display-inline me-3">
-                    <span className="me-3">U.S. Congressional Districts – Texas</span>
+                <div class="map-head display-inline col-sm-6 d-flex justify-content-between p-0 pb-1 pb-sm-0">
+                  <h5 className="my-0 display-inline">
+                    <span className="">U.S. Congressional Districts – TX</span>
                     
                   </h5>
                 </div>
-                <div className="col-2">
-                  <MapTooltip />
-                </div>
-                <div className="col-md-6 col-sm-5 col-4">
-                  <div className="row justify-content-end">
-                    <button onClick={zoomOut} className="zoom col-md-2 col-sm-3 col-3 p-0" id="zoom-out"><i className="fas fa-search-minus" ></i></button>
-                    <button onClick={zoomIn} className="zoom col-md-2 col-sm-3 col-3 p-0" id="zoom-in"><i className="fas fa-search-plus" ></i></button>
+                
+                <div className="col-sm-6 pe-2">
+                  <div className="row justify-content-center">
+                    <div className="col-2 p-0">
+                      <MapTooltip/>
+                    </div>
+                    
+                    <div className="col-6 p-0">
+                      <button onClick={zoomOut} className="zoom w-50 h-100 p-0" id="zoom-out"><i className="fas fa-search-minus" ></i></button>
+                      <button onClick={zoomIn} className="zoom w-50 h-100 p-0" id="zoom-in"><i className="fas fa-search-plus" ></i></button>
+                    </div>
 
 
-                    <button onClick={resetTransform} className="zoom col-md-3 col-sm-5 col-5 p-0" id="zoom-reset">Reset</button>
+
+                    <button onClick={resetTransform} className="zoom col-4 p-0" id="zoom-reset">Reset</button>
                   </div>
 
                 </div>
