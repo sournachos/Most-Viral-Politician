@@ -20,7 +20,10 @@ export default function InteractiveMap() {
               <div className="tools row d-flex flex-row justify-content-between align-items-center p-2" >
                 <div class="map-head display-inline col-md-6 col-sm-7 col-8 d-flex justify-content-between">
                   <h5 className="my-0 display-inline">
-                    U.S. Congressional Districts – Texas<span className="ms-3"><i className="fas fa-info-circle display-inline-block"></i></span>
+                    U.S. Congressional Districts – Texas
+                    <span className="ms-3">
+                      <i className="fas fa-info-circle display-inline-block" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right"></i>
+                    </span>
                   </h5>
                 </div>
 
