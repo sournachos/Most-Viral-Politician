@@ -2,6 +2,9 @@ import React from "react";
 import Map from "../Map";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import "./style.css";
+import MapTooltip from "../MapTooltip";
+
+
 
 export default function InteractiveMap() {
   return (
@@ -19,8 +22,9 @@ export default function InteractiveMap() {
             <div className="container-fluid">
               <div className="tools row d-flex flex-row justify-content-between align-items-center p-2" >
                 <div class="map-head display-inline col-md-6 col-sm-7 col-8 d-flex justify-content-between">
-                  <h5 className="my-0 display-inline">
-                    U.S. Congressional Districts – Texas<span className="ml-3"><i className="fas fa-info-circle display-inline-block"></i></span>
+                  <h5 className="my-0 display-inline me-3">
+                    <span className="me-3">U.S. Congressional Districts – Texas</span>
+                    <MapTooltip />
                   </h5>
                 </div>
 

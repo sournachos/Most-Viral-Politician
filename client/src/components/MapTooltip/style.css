@@ -1,0 +1,18 @@
+.map-tooltip-text {
+  font-size: 11px;
+  line-height: 8px !important;
+  text-align: left !important;
+}
+
+.map-tooltip-button {
+  background-color: var(--color-light) !important;
+}
+
+.map-tooltip-button:hover {
+  background-color: var(--color-dark2) !important;
+  border-color: var(--color-dark2) !important;
+}
+
+.map-tooltip-button:hover i {
+  color: var(--color-light);
+}

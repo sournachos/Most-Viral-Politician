@@ -26,7 +26,7 @@ export function ListItem({ children }) {
       <a className="text-decoration-none" href="/polprofile">
         <div className="d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center">
-            <h1 className="bold d-inline listNum mr-3">1</h1>
+            <h1 className="bold d-inline listNum me-3">1</h1>
             <img className="polImg d-inline" src="https://i.imgflip.com/4cis9f.png" />
           </div>
 
