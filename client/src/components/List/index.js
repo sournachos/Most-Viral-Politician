@@ -11,12 +11,12 @@ export function List({ children }) {
 
   // Load all books and store them with setBooks
   useEffect(() => {
-     loadPols()
+    loadPols()
   }, [])
 
   // Loads all books and sets them to books
-   function loadPols() {
-     API.getPols()
+  function loadPols() {
+    API.getPols()
       .then(res =>
         setPols(res.data)
       )
@@ -29,7 +29,7 @@ export function List({ children }) {
         <ul className="list-group" id="List">
 
           {pols.map(pol => (
-            <ListItem key={pol._id} name={pol.name} image={pol.image} />
+            <ListItem key={pol._id} name={pol.name} image={pol.image} district={pol._id} />
           ))}
 
         </ul>
@@ -41,7 +41,7 @@ export function List({ children }) {
   );
 }
 
-export function ListItem({name, image}) {
+export function ListItem({ name, image, district }) {
   const { currentUser } = useAuth()
 
   const favoritePol = () => {
@@ -54,12 +54,13 @@ export function ListItem({name, image}) {
       <a className="text-decoration-none" href="/polprofile">
         <div className="d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center">
-            <img className="polImg d-inline" src={image} />
+            <img className="polImg d-inline" width="100px" height="100px" src={image} />
 
           </div>
-
-          <h4 className="polName">{name}</h4>
-
+          <div className="text-center">
+            <h4 className="polName">{name}</h4>
+            <span style={{ color: "black" }}>District: {district}</span>
+          </div>
           {favoritePol()}
 
         </div>
