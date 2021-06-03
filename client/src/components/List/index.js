@@ -26,7 +26,7 @@ export function List({ children }) {
   return (
     <>
       {pols.length ? (
-        <ul className="list-group">
+        <ul className="list-group" id="List">
 
           {pols.map(pol => (
             <ListItem key={pol._id} name={pol.name} image={pol.image} />
@@ -37,6 +37,7 @@ export function List({ children }) {
         <h3>No Results to Display</h3>
       )}
     </>
+
   );
 }
 
@@ -54,6 +55,7 @@ export function ListItem({name, image}) {
         <div className="d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center">
             <img className="polImg d-inline" src={image} />
+
           </div>
 
           <h4 className="polName">{name}</h4>

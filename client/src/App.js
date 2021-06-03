@@ -13,7 +13,7 @@ import LoginBtn from "./components/LoginBtn"
 
 const styles = {
   body: {
-    margin: "5%"
+    margin: "0% 5%"
   }
   
 }
