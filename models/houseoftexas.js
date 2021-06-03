@@ -11,6 +11,6 @@ const texas_congress = new Schema({
   image:{ type: String, required: true }
 }, {collection: 'texas_congress'});
 
-const Profile = mongoose.model("Profile", texas_congress);
+const houseoftexas = mongoose.model("houseoftexas", texas_congress);
 
-module.exports = Profile;
+module.exports = houseoftexas;
