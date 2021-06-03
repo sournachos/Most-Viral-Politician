@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import { useAuth } from "../../contexts/AuthContext"
+// import pyScraper from "../../../../webscraper/mongo/index"
 
 // This file exports both the List and ListItem components
 
@@ -18,7 +19,7 @@ export function ListItem({ children }) {
   const favoritePol = () => {
     return currentUser ? <div><p className="mb-0" style={{color:"black"}}>Favorite</p><input type="checkbox" className="ms-4" onClick="favIt(star, def)" style={{cursor:"copy"}}></input></div> : <></>
   };
-
+// console.log(pyScraper)
 
   return (
     <li className="list-group-item">
