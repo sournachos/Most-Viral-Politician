@@ -7,13 +7,15 @@
   background-color: var(--color-dark2) !important;
   color: var(--color-light) !important;
 }
+
 .list-group-horizontal {
   display: inline-flex !important;
-}
-.card {
-  width:fit-content !important;
 }
 
 .jumpto {
   color: var(--color-dark2)
+}
+
+.c-nav-parent .card {
+  width:fit-content !important;
 }

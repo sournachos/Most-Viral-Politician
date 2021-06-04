@@ -8,7 +8,7 @@ import MapTooltip from "../MapTooltip";
 
 export default function InteractiveMap() {
   return (
-    <div className="map-box mb-5 mw-100 rounded" id="InteractiveMap">
+    <div className="map-box mb-5 w-100 rounded" id="InteractiveMap">
       <TransformWrapper
         defaultScale={0.98}
         defaultPositionX={200}
