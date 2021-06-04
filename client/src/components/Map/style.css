@@ -33,5 +33,7 @@ body {
 }
 
 svg{
-  min-width: 30vw;
+  position: absolute;
+  top: 50;
+  left: 10;
 }
