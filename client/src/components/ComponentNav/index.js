@@ -4,11 +4,10 @@ import "./style.css";
 
 export default function ComponentNav({ headings }) {
   return (
-    <div className="my-3">
+    <div className="my-3 c-nav-parent">
       <Card >
         <Card.Body>
           <span className="me-2 jumpto">Jump to:</span>
-          <span>
             <ListGroup horizontal>
               {headings.map(heading => {
                 let link = heading.split(" ").join("");
@@ -17,7 +16,6 @@ export default function ComponentNav({ headings }) {
                   </a>
               })}
             </ListGroup>
-          </span>
 
         </Card.Body>
       </Card>
