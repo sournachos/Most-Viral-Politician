@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <ComponentNav 
-        headings={["Interactive Map", "List"]}
+        headings={["Interactive Map", "List", "Watch List"]}
       />
       <Card>
         <Card.Body>
