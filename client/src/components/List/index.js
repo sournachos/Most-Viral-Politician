@@ -29,7 +29,8 @@ export function List({ children }) {
         <ul className="list-group" id="List">
 
           {pols.map(pol => (
-            <ListItem key={pol._id} name={pol.name} image={pol.image} district={pol._id} />
+
+            <ListItem key={pol._id} name={pol.name} image={pol.image} district={pol._id} party={pol.party} />
           ))}
 
         </ul>
@@ -41,17 +42,17 @@ export function List({ children }) {
   );
 }
 
-export function ListItem({ name, image, district }) {
+export function ListItem({ name, image, district, party }) {
   const { currentUser } = useAuth()
 
   const favoritePol = () => {
-    return currentUser ? <div><p className="mb-0" style={{ color: "black" }}>Favorite</p><input type="checkbox" className="ms-4" onClick="favIt(star, def)" style={{ cursor: "copy" }}></input></div> : <></>
+    return currentUser ? <div><p className="mb-0" style={{ color: "black" }}>Watching</p><input type="checkbox" className="ms-4" onClick="favIt(star, def)" style={{ cursor: "copy" }}></input></div> : <></>
   };
   // console.log(pyScraper)
 
   return (
     <li className="list-group-item">
-      <a className="text-decoration-none" href="/polprofile">
+      <a className="text-decoration-none" href={"/polprofile/" + district} >
         <div className="d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center">
             <img className="polImg d-inline" width="100px" height="100px" src={image} />
@@ -59,7 +60,7 @@ export function ListItem({ name, image, district }) {
           </div>
           <div className="text-center">
             <h4 className="polName">{name}</h4>
-            <span style={{ color: "black" }}>District: {district}</span>
+            <span style={{ color: "black" }}>District: {district}<span>{party}</span></span>
           </div>
           {favoritePol()}
 
