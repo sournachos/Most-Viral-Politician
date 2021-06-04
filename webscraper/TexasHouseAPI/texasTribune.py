@@ -1,10 +1,10 @@
 import os
+from os import environ
 import pprint
 import json
 from selenium import webdriver
 from time import sleep
 from pymongo import MongoClient
-from password import password
 
 
 def getWebdriver(local = False):
@@ -18,19 +18,23 @@ def getWebdriver(local = False):
     op.add_argument("--no-sandbox")
     op.add_argument("--disable-dec-sh-usage")
 
-    driver = webdriver.Chrome(executable_path = os.environ.get("CHROMEDRIVER_PATH"), chrome_options=op)
+    driver = webdriver.Chrome(executable_path = os.environ.get("CHROMEDRIVER_PATH"), options=op)
 
     return driver
 
-def connectMongo(password = password()):
+def connectMongo(local = False):
 
-    cluster = MongoClient(f'mongodb+srv://webuser:{password}@cluster0.gg0wl.mongodb.net/texas_congress_db?retryWrites=true&w=majority')
-    db = cluster['Cluster0']
+    # if not local:
+    #     password = environ['DB_PASSWORD']
+
+    cluster = MongoClient(f'mongodb+srv://hello:hello@cluster0.txmw4.mongodb.net/houseoftexas?retryWrites=true&w=majority')
+    db = cluster['houseoftexas']
     collection = db['texas_congress']
     return collection
 
-def scrapeTexasCongress():
-    driver = getWebdriver(local = True)
+def scrapeTexasCongress(local = False):
+
+    driver = getWebdriver(local = local)
 
     driver.get("https://www.texastribune.org/directory/#congress")
     sleep(2)
@@ -112,7 +116,7 @@ def deleteDB(db):
 
 def initDB(db, tx_congress):
     for congressman in tx_congress:
-        db.insert_one({'_id':tx_congress[congressman]['_id'],'name':congressman,'twitter':tx_congress[congressman]['twitter'], 'facebook':tx_congress[congressman]['facebook']})
+        db.insert_one({'_id':tx_congress[congressman]['_id'],'name':congressman,'email':tx_congress[congressman]['email'], 'image':tx_congress[congressman]['image'],'phone':tx_congress[congressman]['phone'],'twitter':tx_congress[congressman]['twitter'], 'facebook':tx_congress[congressman]['facebook']})
 
 def updateDB(db, tx_congress):
     for congressman in tx_congress:
@@ -122,11 +126,13 @@ def updateDB(db, tx_congress):
 
 def main():
 
-    db = connectMongo()
+    local = False
+
+    db = connectMongo(local)
     # deleteDB(db)
-    tx_congress = scrapeTexasCongress()
-    # initDB(db, tx_congress)
-    updateDB(db,tx_congress)
+    tx_congress = scrapeTexasCongress(local)
+    initDB(db, tx_congress)
+    # updateDB(db,tx_congress)
     printDB(db)
 
 
