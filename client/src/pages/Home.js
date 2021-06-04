@@ -14,9 +14,13 @@ const blue = "#0B406F";
 export default function Home() {
   return (
     <>
-      <ComponentNav 
-        headings={["Interactive Map", "List"]}
-      />
+    
+
+          <ComponentNav 
+            headings={["Interactive Map", "List"]}
+          />
+
+
       <Card>
         <Card.Body>
         <InteractiveMap />
