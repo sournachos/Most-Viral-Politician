@@ -34,7 +34,7 @@ function App() {
               <div style={styles.body}>
                 <PrivateRoute exact path={["/", "/home"]} component={Home} />
                 <Route path="/home" component={Home} />
-                <Route path="/polprofile" component={PolProfile} />
+                <Route path="/polprofile/:_id" component={PolProfile} />
               </div>
               </Switch>
             
