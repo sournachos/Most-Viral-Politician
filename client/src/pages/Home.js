@@ -1,4 +1,5 @@
 import React from "react"
+import ComponentNav from "../components/ComponentNav"
 import InteractiveMap from "../components/InteractiveMap";
 import { List, ListItem } from "../components/List"
 import { Button, Card } from "react-bootstrap"
@@ -13,6 +14,13 @@ const blue = "#0B406F";
 export default function Home() {
   return (
     <>
+    
+
+          <ComponentNav 
+            headings={["Interactive Map", "List"]}
+          />
+
+
       <Card>
         <Card.Body>
         <InteractiveMap />

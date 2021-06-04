@@ -13,7 +13,7 @@ import LoginBtn from "./components/LoginBtn"
 
 const styles = {
   body: {
-    margin: "5%"
+    margin: "0% 5%"
   }
   
 }
@@ -32,7 +32,7 @@ function App() {
                 <Route path="/login" component={Login} />
                 <Route path="/forgot-password" component={ForgotPassword} />
               <div style={styles.body}>
-                <PrivateRoute exact path="/" component={Home} />
+                <PrivateRoute exact path={["/", "/home"]} component={Home} />
                 <Route path="/home" component={Home} />
                 <Route path="/polprofile" component={PolProfile} />
               </div>
