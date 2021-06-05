@@ -51,7 +51,7 @@ export function ListItem({ name, image, district, party }) {
   // console.log(pyScraper)
 
   return (
-    <li className="list-group-item">
+    <li id={"d"+district} className={"list-group-item" }>
       <a className="text-decoration-none" href={"/polprofile/" + district} >
         <div className="d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center">
