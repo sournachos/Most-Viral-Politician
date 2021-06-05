@@ -35,3 +35,22 @@ body {
 svg{
   min-width: 30vw;
 }
+
+.popover-header {
+  background-color: var(--color-light) !important;
+  color: var(--color-dark) !important;
+}
+
+.popover::after {
+  position: absolute;
+  left: -7px;
+  top: 50%;
+  content: '';
+  width: 15px;
+  height: 15px;
+  background: var(--color-light);
+  border-width: 0 0 1px 1px;
+  border-style: solid;
+  border-color: #d8d8d8;
+  transform: rotate(45deg);
+}
