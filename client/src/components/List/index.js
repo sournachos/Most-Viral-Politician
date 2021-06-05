@@ -46,7 +46,7 @@ export function ListItem({ name, image, district, party }) {
   const { currentUser } = useAuth()
 
   const favoritePol = () => {
-    return currentUser ? <div><p className="mb-0" style={{ color: "black" }}>Watching</p><input type="checkbox" id={district} className="ms-4" style={{ cursor: "copy" }}></input></div> : <></>
+    return currentUser ? <div><p className="mb-0" style={{ color: "black" }}>Watching</p><input type="checkbox" id={'congressman'+ district} className="ms-4" style={{ cursor: "copy" }}></input></div> : <></>
   };
   // console.log(pyScraper)
 
