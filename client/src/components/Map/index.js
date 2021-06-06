@@ -41,6 +41,10 @@ function DistrModal(props) {
 
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
+        { props.info ? (
+          <a href={"/polprofile/"+props.info._id}><Button>Profile &gt;&gt;</Button></a>
+        )
+        : <></>}
       </Modal.Footer>
     </Modal>
   );
@@ -50,15 +54,6 @@ function Map(props) {
   const data = useContext(DataContext);
   const [modalShow, setModalShow] = useState(false);
   const [modalData, setModalData] = useState({});
-
-  // useEffect(() => {
-  //   console.log(data);
-  //   const districts = document.querySelectorAll("path");
-  //   districts.forEach(dist => {
-  //     const dMatch = data.find(item => item._id === dist.getAttribute("id"));
-  //     dist.classList.add(dMatch.party.toLowerCase());
-  //   })
-  // }, [data])
 
   const handleDistrClick = (e) => {
     const id = e.target.getAttribute("id");
@@ -73,11 +68,8 @@ function Map(props) {
       default:
         setModalData(data[id-2])
     }
-    
-    
     setModalShow(true);
   }
-
 
   return (
      <>  
