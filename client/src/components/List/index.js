@@ -1,27 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./style.css";
 import { useAuth } from "../../contexts/AuthContext"
 import API from "../../utils/API";
+import DataContext from "../../contexts/DataContext";
 // import pyScraper from "../../../../webscraper/mongo/index"
 
 // This file exports both the List and ListItem components
 
 export function List({ children }) {
-  const [pols, setPols] = useState([])
+  const pols = useContext(DataContext)
 
   // Load all books and store them with setBooks
-  useEffect(() => {
-    loadPols()
-  }, [])
+
 
   // Loads all books and sets them to books
-  function loadPols() {
-    API.getPols()
-      .then(res =>
-        setPols(res.data)
-      )
-      .catch(err => console.log(err));
-  };
+
 
   return (
     <>

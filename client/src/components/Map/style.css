@@ -41,10 +41,10 @@ svg{
   color: var(--color-dark) !important;
 }
 
-.popover::after {
+/* .popover::after {
   position: absolute;
-  left: -7px;
-  top: 50%;
+  top: -7px;
+  left: 50%;
   content: '';
   width: 15px;
   height: 15px;
@@ -53,4 +53,4 @@ svg{
   border-style: solid;
   border-color: #d8d8d8;
   transform: rotate(45deg);
-}
+} */
