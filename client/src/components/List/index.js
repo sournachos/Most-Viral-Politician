@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
 import { useAuth } from "../../contexts/AuthContext"
+import { db } from "../../firebase"
 import API from "../../utils/API";
 // import pyScraper from "../../../../webscraper/mongo/index"
 
@@ -44,24 +45,35 @@ export function List({ children }) {
 
 export function ListItem({ name, image, district, party }) {
   const [check, setCheck] = useState(false)
-  const [polid, setPolId] = useState('congressman'+ district)
-  const { currentUser, db1 } = useAuth()
+  const [polid, setPolId] = useState('congressman' + district)
+  const { currentUser } = useAuth()
+
 
   const favoritePol = () => {
-    return currentUser ? <div><p className="mb-0" style={{ color: "black" }}>Watching</p><input id={polid} checked={check} onChange={handleChange} type="checkbox"  className="ms-4" style={{ cursor: "copy" }}></input></div> : <></>
+    return currentUser ? <div><p className="mb-0" style={{ color: "black" }}>Watching</p><input id={polid} checked={check} onChange={handleChange} type="checkbox" className="ms-4" style={{ cursor: "copy" }}></input></div> : <></>
   };
 
-  const handleChange = async () => {
-    check ? setCheck(false) : setCheck(true)
-    check ? console.log('its on') : console.log('its off')
+  const checkOff = () => {
+    setCheck(false)
+    console.log(polid + ' is off')
 
-    await db1.doc("" + currentUser.uid).set({
-      watch: polid
-    })
+    db.collection(currentUser.uid).doc(polid).delete()
+      .then(console.log('deleted from database!'))
+  }
 
-    console.log(polid)
-    
-    console.log("hey fucker you clicked on ")
+  const checkOn = () => {
+    setCheck(true)
+    console.log(polid + ' is on')
+
+    db.collection(currentUser.uid).doc(polid).set(
+      {
+       watch: polid 
+      })
+      .then(console.log('submitted to database!'))
+  }
+
+  const handleChange = () => {
+    check ? checkOff() : checkOn()
   }
 
   return (
