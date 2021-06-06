@@ -47,7 +47,7 @@ export default function PolProfile() {
               <li><strong>District:</strong> {onepol._id}</li>
               <li><strong>E-mail:</strong> <a href={"mailto:" + onepol.email}>{onepol.email}</a></li>
               <li><strong>Phone:</strong> {onepol.phone}</li>
-              <li><strong>Twitter:</strong> <a href={onepol.twitter}>{onepol.twitter}</a></li>
+              <li><strong>Twitter:</strong> <a href={onepol.twitter ? onepol.twitter.url: ''}>{onepol.twitter ? onepol.twitter.handle : ''}</a></li> 
               <li><strong>Facebook:</strong> <a href={onepol.facebook}>{onepol.facebook}</a></li>
             </ul>
           </Card.Body>
