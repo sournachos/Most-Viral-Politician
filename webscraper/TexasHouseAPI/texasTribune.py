@@ -1,36 +1,30 @@
 import os
+from os import environ
 import pprint
 import json
-from selenium import webdriver
+from twitterStats import twitterCongress
+from facebookStats import facebookCongress
 from time import sleep
 from pymongo import MongoClient
-from password import password
+from webdriver import getWebdriver
 
+# from password import password
 
-def getWebdriver(local = False):
+# testing adding
 
-    if local:
-        return webdriver.Chrome()
+def connectMongo(local = False):
 
-    op = webdriver.ChromeOptions()
-    op.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
-    op.add_argument("--headless")
-    op.add_argument("--no-sandbox")
-    op.add_argument("--disable-dec-sh-usage")
+    # if not local:
+    #     password = environ['DB_PASSWORD']
 
-    driver = webdriver.Chrome(executable_path = os.environ.get("CHROMEDRIVER_PATH"), chrome_options=op)
-
-    return driver
-
-def connectMongo(password = password()):
-
-    cluster = MongoClient(f'mongodb+srv://webuser:{password}@cluster0.gg0wl.mongodb.net/texas_congress_db?retryWrites=true&w=majority')
-    db = cluster['Cluster0']
+    cluster = MongoClient(f'mongodb+srv://hello:hello@cluster0.txmw4.mongodb.net/houseoftexas?retryWrites=true&w=majority')
+    db = cluster['houseoftexas']
     collection = db['texas_congress']
     return collection
 
-def scrapeTexasCongress():
-    driver = getWebdriver(local = True)
+def scrapeTexasCongress(local = False):
+
+    driver = getWebdriver(local = local)
 
     driver.get("https://www.texastribune.org/directory/#congress")
     sleep(2)
@@ -88,15 +82,23 @@ def scrapeTexasCongress():
             except:
                 data['image'] = 'No Image'
 
+            try:
+                party = json.loads(driver.find_element_by_xpath("//*[contains(text(),'https://schema.org/')]").get_attribute('innerHTML'))['keywords'][3]
+                data['party'] = party
+            except:
+                data['party'] = 'No Party'
+
             buttons = driver.find_elements_by_class_name("c-button")
             for button in buttons:
                 button_link = button.get_attribute("href")
 
                 if ('facebook' in button_link):
-                    data['facebook'] = button_link
+                    data['facebook'] = facebookCongress(button_link, local = local)
 
                 if('twitter' in button_link):
-                    data['twitter'] = button_link
+
+                    data['twitter'] = twitterCongress(button_link, local = local)
+            
 
             tx_congress[(driver.find_element_by_class_name('politician-header').text.split('\n')[0].split('U.S. Representative ')[1].replace('.',''))] = data
     driver.close()
@@ -112,22 +114,24 @@ def deleteDB(db):
 
 def initDB(db, tx_congress):
     for congressman in tx_congress:
-        db.insert_one({'_id':tx_congress[congressman]['_id'],'name':congressman,'twitter':tx_congress[congressman]['twitter'], 'facebook':tx_congress[congressman]['facebook']})
+        db.insert_one({'_id':tx_congress[congressman]['_id'],'name':congressman,'email':tx_congress[congressman]['email'], 'image':tx_congress[congressman]['image'],'phone':tx_congress[congressman]['phone'],'twitter':tx_congress[congressman]['twitter'], 'facebook':tx_congress[congressman]['facebook']})
 
 def updateDB(db, tx_congress):
     for congressman in tx_congress:
         filter = {'_id':tx_congress[congressman]['_id']}
-        updated_values = {'$set':{'name':congressman,'email':tx_congress[congressman]['email'], 'image':tx_congress[congressman]['image'],'phone':tx_congress[congressman]['phone'],'twitter':tx_congress[congressman]['twitter'], 'facebook':tx_congress[congressman]['facebook']}}
+        updated_values = {'$set':{'name':congressman,'party':tx_congress[congressman]['party'],'email':tx_congress[congressman]['email'], 'image':tx_congress[congressman]['image'],'phone':tx_congress[congressman]['phone'],'twitter':tx_congress[congressman]['twitter'], 'facebook':tx_congress[congressman]['facebook']}}
         db.update_one(filter, updated_values)
 
 def main():
 
-    db = connectMongo()
+    local = True
+
+    #db = connectMongo(local)
     # deleteDB(db)
-    tx_congress = scrapeTexasCongress()
+    tx_congress = scrapeTexasCongress(local)
     # initDB(db, tx_congress)
-    updateDB(db,tx_congress)
-    printDB(db)
+    # updateDB(db,tx_congress)
+    #printDB(db)
 
 
 main()

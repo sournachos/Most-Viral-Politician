@@ -1,28 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./style.css";
 import { useAuth } from "../../contexts/AuthContext"
 import { db } from "../../firebase"
 import API from "../../utils/API";
+import DataContext from "../../contexts/DataContext";
 // import pyScraper from "../../../../webscraper/mongo/index"
 
 // This file exports both the List and ListItem components
 
 export function List({ children }) {
-  const [pols, setPols] = useState([])
+  const pols = useContext(DataContext)
 
   // Load all books and store them with setBooks
-  useEffect(() => {
-    loadPols()
-  }, [])
 
   // Loads all books and sets them to books
-  function loadPols() {
-    API.getPols()
-      .then(res =>
-        setPols(res.data)
-      )
-      .catch(err => console.log(err));
-  };
+
 
   return (
     <>
@@ -77,7 +69,7 @@ export function ListItem({ name, image, district, party }) {
   }
 
   return (
-    <li className="list-group-item">
+    <li id={"d"+district} className={"list-group-item" }>
       <a className="text-decoration-none" href={"/polprofile/" + district} >
         <div className="d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center">
