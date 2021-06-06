@@ -4,6 +4,7 @@
 
 nav {
   background-color: var(--color-dark) !important;
+  padding: 0.5rem 0.3rem !important;
 }
 
 .navbar-brand {
