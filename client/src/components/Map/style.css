@@ -11,6 +11,61 @@
   --color-dark2: rgb(49, 49, 49);
   --color-light-grey: rgb(235, 235, 235);
 }
+.map-box { 
+  width: 100%;
+  border: 1px solid var(--color-dark);
+  background-color: var(--color-light-grey);
+  overflow: auto;
+}
+
+.map-head h5 {
+  color: var(--color-light);
+  font-size: 14.5px
+}
+
+.zoom {
+  border: 1px var(--color-dark2) solid;
+  border-radius: 4px;
+  background-color: var(--color-light);
+  text-align: center;
+}
+#zoom-reset {
+  font-size: 14px;
+}
+.tools {
+  border-bottom: 1px var(--color-dark2) solid;
+  background-color: var(--color-dark);
+}
+
+#zoom-in:hover {
+  background-color: var(--color-red);
+  color: var(--color-light);
+}
+
+#zoom-out:hover {
+  background-color: var(--color-blue);
+  color: var(--color-light);
+}
+
+#zoom-in:hover i{
+  background-color: var(--color-red);
+  color: var(--color-light);
+}
+
+#zoom-out:hover i{
+  background-color: var(--color-blue);
+  color: var(--color-light);
+}
+
+
+#zoom-reset:hover {
+  background-color: var(--color-dark2);
+  color: var(--color-light);
+}
+.zoom:hover i {
+  color: var(--color-light);
+}
+
 
 body {
   background-color: var(--color-light);
@@ -32,6 +87,74 @@ body {
   fill: var(--color-blue-light);
 }
 
+svg{
+  overflow: hidden;
+  position: relative;
+  min-height: 70vh;
+  min-width: 90vw;
+  
+}
+g{
+  position:relative;
+  overflow: hidden;
+  transform:translate(20%, 10% ) scale(100%);
+  vertical-align: middle;
+}
+@media screen and (max-width:3001px) {
+  g{
+    transform:translate(25%, 3%)scale(100%);
+    vertical-align: middle;
+  }
+}
+@media screen and (max-width:1901px) {
+  g{
+    transform:translate(23%, 7%)scale(100%);
+    vertical-align: middle;
+  }
+}
+@media screen and (max-width:1681px) {
+  g{
+    transform:translate(23%, 3%)scale(90%);
+    vertical-align: middle;
+  }
+}
+@media screen and (max-width:1601px) {
+  g{
+    transform:translate(20%, 5%)scale(100%);
+    vertical-align: middle;
+  }
+}
+@media screen and (max-width:1281px) {
+  g{
+    transform:translate(17%, 3%)scale(90%);
+    vertical-align: middle;
+  }
+}
+@media screen and (max-width:1025px) {
+  g{
+    transform:translate(5%, 10%)scale(90%);
+    vertical-align: middle;
+  }
+}
+@media screen and (max-width:769px) {
+  g{
+    transform:translate(10%, 10%)scale(65%);
+    vertical-align: middle;
+  }
+}
+@media screen and (max-width:640px) {
+  g{
+    transform:scale(50%);
+    vertical-align: middle;
+  }
+}
+
+@media screen and (max-width:376px) {
+  g{
+    transform:translate(0, 10%)scale(35%);
+    vertical-align: middle;
+  }
+}
 .none {
   fill: var(--color-dark);
 }
