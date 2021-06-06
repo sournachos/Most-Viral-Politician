@@ -78,8 +78,9 @@ export function ListItem({ name, image, district, party }) {
 
           </div>
           <div className="text-center">
-            <h4 className="polName">{name}</h4>
-            <span style={{ color: "black" }}>District: {district}<span>{party}</span></span>
+            <h4 className="pol-name">{name}</h4>
+            <h5 className="pol-distr">District: {district}</h5>
+            <h5 className={`pol-party pol-party-${party}`}>{party}</h5>
           </div>
           {favoritePol()}
 
