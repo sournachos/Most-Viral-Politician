@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import "./style.css";
 import { useAuth } from "../../contexts/AuthContext"
+import { db } from "../../firebase"
 import API from "../../utils/API";
 import DataContext from "../../contexts/DataContext";
 // import pyScraper from "../../../../webscraper/mongo/index"
@@ -35,12 +36,37 @@ export function List({ children }) {
 }
 
 export function ListItem({ name, image, district, party }) {
+  const [check, setCheck] = useState(false)
+  const [polid, setPolId] = useState('congressman' + district)
   const { currentUser } = useAuth()
 
+
   const favoritePol = () => {
-    return currentUser ? <div><p className="mb-0" style={{ color: "black" }}>Watching</p><input type="checkbox" className="ms-4" onClick="favIt(star, def)" style={{ cursor: "copy" }}></input></div> : <></>
+    return currentUser ? <div><p className="mb-0" style={{ color: "black" }}>Watching</p><input id={polid} checked={check} onChange={handleChange} type="checkbox" className="ms-4" style={{ cursor: "copy" }}></input></div> : <></>
   };
-  // console.log(pyScraper)
+
+  const checkOff = () => {
+    setCheck(false)
+    console.log(polid + ' is off')
+
+    db.collection(currentUser.uid).doc(polid).delete()
+      .then(console.log('deleted from database!'))
+  }
+
+  const checkOn = () => {
+    setCheck(true)
+    console.log(polid + ' is on')
+
+    db.collection(currentUser.uid).doc(polid).set(
+      {
+       watch: polid 
+      })
+      .then(console.log('submitted to database!'))
+  }
+
+  const handleChange = () => {
+    check ? checkOff() : checkOn()
+  }
 
   return (
     <li id={"d"+district} className={"list-group-item" }>
