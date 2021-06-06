@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Modal, Button } from "react-bootstrap";
 import "./style.css";
-import API from "../../utils/API";
 import "bootstrap/dist/css/bootstrap.min.css";
 import DataContext from "../../contexts/DataContext";
 
@@ -38,10 +37,7 @@ function Map(props) {
 
   const handleDistrClick = (e) => {
     const id = e.target.getAttribute("id");
-    console.log(id);
-    console.log(data);
     const d = data[id-1];
-    console.log(d);
     setModalData(d);
     setModalShow(true);
   }
