@@ -43,12 +43,26 @@ export function List({ children }) {
 }
 
 export function ListItem({ name, image, district, party }) {
-  const { currentUser } = useAuth()
+  const [check, setCheck] = useState(false)
+  const [polid, setPolId] = useState('congressman'+ district)
+  const { currentUser, db1 } = useAuth()
 
   const favoritePol = () => {
-    return currentUser ? <div><p className="mb-0" style={{ color: "black" }}>Watching</p><input type="checkbox" id={'congressman'+ district} className="ms-4" style={{ cursor: "copy" }}></input></div> : <></>
+    return currentUser ? <div><p className="mb-0" style={{ color: "black" }}>Watching</p><input id={polid} checked={check} onChange={handleChange} type="checkbox"  className="ms-4" style={{ cursor: "copy" }}></input></div> : <></>
   };
-  // console.log(pyScraper)
+
+  const handleChange = async () => {
+    check ? setCheck(false) : setCheck(true)
+    check ? console.log('its on') : console.log('its off')
+
+    await db1.doc("" + currentUser.uid).set({
+      watch: polid
+    })
+
+    console.log(polid)
+    
+    console.log("hey fucker you clicked on ")
+  }
 
   return (
     <li className="list-group-item">
