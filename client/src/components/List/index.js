@@ -65,7 +65,7 @@ export function ListItem({ name, image, district, party }) {
   }
 
   const handleChange = (e) => {
-    e.stopPropagation();
+    e.preventDefault();
     return check ? checkOff() : checkOn()
   }
 
