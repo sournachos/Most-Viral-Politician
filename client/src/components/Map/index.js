@@ -11,6 +11,7 @@ function DistrModal(props) {
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
+      className="distr-modal"
     >
       {props.info ? ( 
       <>
@@ -40,9 +41,9 @@ function DistrModal(props) {
     }
 
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <Button onClick={props.onHide} className="close-btn">Close</Button>
         { props.info ? (
-          <a href={"/polprofile/"+props.info._id}><Button>Profile &gt;&gt;</Button></a>
+          <a href={"/polprofile/"+props.info._id}><Button className="profile-btn">Profile &gt;&gt;</Button></a>
         )
         : <></>}
       </Modal.Footer>
