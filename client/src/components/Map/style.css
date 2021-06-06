@@ -36,7 +36,7 @@ svg{
   overflow: hidden;
   position: relative;
   min-height: 70vh;
-  min-width: 80vw;
+  min-width: 90vw;
   
 }
 g{
@@ -44,6 +44,43 @@ g{
   overflow: hidden;
   transform:translate(20%, 10% ) scale(75%);
   vertical-align: middle;
+}
+
+@media screen and (max-width:1901px) {
+  g{
+    transform:translate(23%, 7%)scale(100%);
+    vertical-align: middle;
+  }
+}
+@media screen and (max-width:1681px) {
+  g{
+    transform:translate(23%, 3%)scale(90%);
+    vertical-align: middle;
+  }
+}
+@media screen and (max-width:1601px) {
+  g{
+    transform:translate(20%, 5%)scale(100%);
+    vertical-align: middle;
+  }
+}
+@media screen and (max-width:1281px) {
+  g{
+    transform:translate(17%, 3%)scale(90%);
+    vertical-align: middle;
+  }
+}
+@media screen and (max-width:1025px) {
+  g{
+    transform:translate(5%, 10%)scale(90%);
+    vertical-align: middle;
+  }
+}
+@media screen and (max-width:769px) {
+  g{
+    transform:translate(10%, 10%)scale(65%);
+    vertical-align: middle;
+  }
 }
 @media screen and (max-width:640px) {
   g{
