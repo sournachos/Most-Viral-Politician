@@ -33,7 +33,28 @@ body {
 }
 
 svg{
-  position: absolute;
-  top: 50;
-  left: 10;
+  overflow: hidden;
+  position: relative;
+  min-height: 70vh;
+  min-width: 80vw;
+  
+}
+g{
+  position:relative;
+  overflow: hidden;
+  transform:translate(20%, 10% ) scale(75%);
+  vertical-align: middle;
+}
+@media screen and (max-width:640px) {
+  g{
+    transform:scale(50%);
+    vertical-align: middle;
+  }
+}
+
+@media screen and (max-width:376px) {
+  g{
+    transform:translate(0, 10%)scale(35%);
+    vertical-align: middle;
+  }
 }

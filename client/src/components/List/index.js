@@ -1,42 +1,71 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import { useAuth } from "../../contexts/AuthContext"
+import API from "../../utils/API";
 // import pyScraper from "../../../../webscraper/mongo/index"
 
 // This file exports both the List and ListItem components
 
 export function List({ children }) {
+  const [pols, setPols] = useState([])
+
+  // Load all books and store them with setBooks
+  useEffect(() => {
+    loadPols()
+  }, [])
+
+  // Loads all books and sets them to books
+  function loadPols() {
+    API.getPols()
+      .then(res =>
+        setPols(res.data)
+      )
+      .catch(err => console.log(err));
+  };
+
   return (
-    <ul className="list-group">
-      <ListItem />
-    </ul>
+    <>
+      {pols.length ? (
+        <ul className="list-group" id="List">
+
+          {pols.map(pol => (
+            <ListItem key={pol._id} name={pol.name} image={pol.image} district={pol._id} />
+          ))}
+
+        </ul>
+      ) : (
+        <h3>No Results to Display</h3>
+      )}
+    </>
+
   );
 }
 
-export function ListItem({ children }) {
-  const {currentUser} = useAuth()
+export function ListItem({ name, image, district }) {
+  const { currentUser } = useAuth()
 
   const favoritePol = () => {
-    return currentUser ? <div><p className="mb-0" style={{color:"black"}}>Favorite</p><input type="checkbox" className="ms-4" onClick="favIt(star, def)" style={{cursor:"copy"}}></input></div> : <></>
+    return currentUser ? <div><p className="mb-0" style={{ color: "black" }}>Favorite</p><input type="checkbox" className="ms-4" onClick="favIt(star, def)" style={{ cursor: "copy" }}></input></div> : <></>
   };
-// console.log(pyScraper)
+  // console.log(pyScraper)
 
   return (
     <li className="list-group-item">
       <a className="text-decoration-none" href="/polprofile">
         <div className="d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center">
-            <h1 className="bold d-inline listNum mr-3">1</h1>
-            <img className="polImg d-inline" src="https://i.imgflip.com/4cis9f.png" />
+            <img className="polImg d-inline" width="100px" height="100px" src={image} />
+
           </div>
-
-          <h4 className="polName">Joe Biden</h4>
-
+          <div className="text-center">
+            <h4 className="polName">{name}</h4>
+            <span style={{ color: "black" }}>District: {district}</span>
+          </div>
           {favoritePol()}
 
         </div>
       </a>
-      
+
 
     </li>
   )
