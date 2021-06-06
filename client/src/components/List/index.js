@@ -64,8 +64,9 @@ export function ListItem({ name, image, district, party }) {
       .then(console.log('submitted to database!'))
   }
 
-  const handleChange = () => {
-    check ? checkOff() : checkOn()
+  const handleChange = (e) => {
+    e.stopPropagation();
+    return check ? checkOff() : checkOn()
   }
 
   return (
