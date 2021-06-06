@@ -16,20 +16,28 @@ body {
   background-color: var(--color-light);
 }
 
-.republican {
+.Republican {
   fill: var(--color-red);
 }
 
-.republican:hover {
+.Republican:hover {
   fill: var(--color-red-light);
 }
 
-.democrat {
+.Democrat {
   fill: var(--color-blue);
 }
 
-.democrat:hover {
+.Democrat:hover {
   fill: var(--color-blue-light);
+}
+
+.none {
+  fill: var(--color-dark);
+}
+
+.none:hover {
+  fill: var(--color-dark2);
 }
 
 svg{
