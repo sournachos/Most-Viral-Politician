@@ -93,8 +93,8 @@ body {
 svg{
   overflow: hidden;
   position: relative;
-  min-height: 70vh;
-  min-width: 90vw;
+  min-height: 100vh;
+  min-width: 100vw;
   
 }
 g{
@@ -107,6 +107,7 @@ g{
   g{
     transform:translate(25%, 3%)scale(100%);
     vertical-align: middle;
+    
   }
 }
 @media screen and (max-width:1901px) {
