@@ -203,8 +203,10 @@ g{
 }
 
 .close-btn:hover {
-  background-color: var(--color-tan-alt) !important;
-  color: rgb(179,179,179) !important;
+  /* background-color: var(--color-tan-alt) !important;
+  color: rgb(179,179,179) !important; */
+  background-color: var(--color-dark2) !important;
+  color: var(--color-light) !important;
 }
 
 .profile-btn:hover {
