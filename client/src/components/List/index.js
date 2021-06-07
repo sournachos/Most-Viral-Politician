@@ -36,7 +36,7 @@ export function ListItem({ name, image, district, party }) {
   const [savedcheck, setSavedCheck] = useLocalStorage(polid, []);
 
   const favoritePol = () => {
-    //savedcheck ? setCheck(true) : setCheck(false)
+     //savedcheck ? setCheck(true) : setCheck(false)
     return currentUser ? <div><p className="mb-0" style={{ color: "black" }}>Watching</p><input id={polid} checked={check} onChange={handleChange} type="checkbox" className="ms-4" style={{ cursor: "copy" }}></input></div> : <></>
   };
 
