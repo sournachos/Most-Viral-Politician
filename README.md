@@ -1,19 +1,19 @@
-<h2 align="center">XP Arcade</h2>
+<h2 align="center">Most Viral Politician</h2>
 
 ___
 
-  ![Background Picture](./public/images/background.jpg)
+<!--   ![Background Picture](./public/images/background.jpg) -->
 
 <p align="center">
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/sournachos/XP-Arcade-PROJECT2">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/sournachos/Most-Viral-Politician">
   <img src="https://img.shields.io/badge/node-%3E%3D%2010.0.0-brightgreen">
   <img src="https://img.shields.io/badge/website-up-brightgreen">
-  <img src="https://img.shields.io/github/issues/sournachos/XP-Arcade-PROJECT2">
-  <img src="https://img.shields.io/github/issues-closed-raw/sournachos/XP-Arcade-PROJECT2">
-  <img src="https://img.shields.io/github/issues-pr-closed-raw/sournachos/XP-Arcade-PROJECT2">
+  <img src="https://img.shields.io/github/issues/sournachos/Most-Viral-Politician">
+  <img src="https://img.shields.io/github/issues-closed-raw/sournachos/Most-Viral-Politician">
+  <img src="https://img.shields.io/github/issues-pr-closed-raw/sournachos/Most-Viral-Politician">
   </br>
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/sournachos/XP-Arcade-PROJECT2">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/sournachos/XP-Arcade-PROJECT2">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/sournachos/Most-Viral-Politician">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/sournachos/Most-Viral-Politician">
   <a href="LICENSE">
     <img alt="License" src="https://img.shields.io/badge/license-MIT-%23F8952D">
   </a>
@@ -47,12 +47,13 @@ ___
 
 ## :information_source: About
 
-We want to recreate the nostalgia of the windows XP experience with a little flair.
-You should be able to play a few classic games and enjoy the 'Helpers'
+The site facilitates access to information about the congressmen and congresswomen of Texas. <br>
+### *** ***Site is functional. Enhancements in progress.*** *** ### 
+<br>
 
 ## :seedling: Requirements To Use
 Simply Click -->
-https://xp-arcade.herokuapp.com/
+https://most-viral-politician.herokuapp.com/
 
 ## :rocket: Technologies 
 
@@ -60,13 +61,15 @@ The project was created using the following technologies:
 
 - NodeJS
 - Bootstrap
-- Handlebars
+- React Framework
 - CSS
-- JQuery
-- Express
-- Sequelize
-- bcrypt
-- MySQL
+- Firebase Authentication
+- Cloud Firestore (NoSQL Database)
+- Mongoose
+- SVG Map
+- MongoDB
+- Custom Python Information-Scraping Scripts
+- *** All npm packages can be seen in package.json ***
 
 ## :link: Contributing 
 
