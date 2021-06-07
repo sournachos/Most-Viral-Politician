@@ -1,8 +1,13 @@
-<h2 align="center">Most Viral Politician</h2>
+&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img width="100px" height="100px" src="./demoImg/flag.gif"> ***Most Viral Politician*** <img width="100px" height="100px" src="./demoImg/flag.gif">
 
 ___
 
-<!--   ![Background Picture](./public/images/background.jpg) -->
+  <div align="center">
+  <img src="./demoImg/demo.PNG"> <br>
+  <img src="./demoImg/demo2.0.png">
+  <img src="./demoImg/Demo3.PNG">
+  </div>
+
 
 <p align="center">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/sournachos/Most-Viral-Politician">
