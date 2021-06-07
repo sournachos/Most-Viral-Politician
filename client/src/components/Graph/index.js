@@ -3,8 +3,7 @@ import { Chart } from 'react-charts'
  
 export function Graph(trends) {
 
-  console.log(trends)
-
+  (console.log(trends))
   const data = React.useMemo(
     () => [
       {
@@ -23,10 +22,10 @@ export function Graph(trends) {
     []
   )
  
-  return  (
+  return(
     <div
       style={{
-        width: '400px',
+        width: '100%',
         height: '300px'
       }}
     >
@@ -34,4 +33,3 @@ export function Graph(trends) {
     </div>
   )
 }
-
