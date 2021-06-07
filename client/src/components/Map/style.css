@@ -101,8 +101,8 @@ body {
 svg{
   overflow: hidden;
   position: relative;
-  min-height: 70vh;
-  min-width: 90vw;
+  min-height: 100vh;
+  min-width: 100vw;
   
 }
 
@@ -226,6 +226,3 @@ g{
   border-color: var(--color-dark2) !important;
 }
 
-svg{
-  min-width: 30vw;
-}
