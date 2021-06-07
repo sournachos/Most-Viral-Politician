@@ -1,4 +1,4 @@
-&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img width="100px" height="100px" src="./demoImg/flag.gif"> ***Most Viral Politician*** <img width="100px" height="100px" src="./demoImg/flag.gif">
+<div align="center"><img width="100px" height="100px" src="./demoImg/flag.gif"> <strong>Most Viral Politician</strong> &ensp;<img width="100px" height="100px" src="./demoImg/flag.gif"></div>
 
 ___
 
