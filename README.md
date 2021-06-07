@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+<h2 align="center">XP Arcade</h2>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+___
 
-## Available Scripts
+  ![Background Picture](./public/images/background.jpg)
 
-In the project directory, you can run:
+<p align="center">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/sournachos/XP-Arcade-PROJECT2">
+  <img src="https://img.shields.io/badge/node-%3E%3D%2010.0.0-brightgreen">
+  <img src="https://img.shields.io/badge/website-up-brightgreen">
+  <img src="https://img.shields.io/github/issues/sournachos/XP-Arcade-PROJECT2">
+  <img src="https://img.shields.io/github/issues-closed-raw/sournachos/XP-Arcade-PROJECT2">
+  <img src="https://img.shields.io/github/issues-pr-closed-raw/sournachos/XP-Arcade-PROJECT2">
+  </br>
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/sournachos/XP-Arcade-PROJECT2">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/sournachos/XP-Arcade-PROJECT2">
+  <a href="LICENSE">
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-%23F8952D">
+  </a>
+    </br>
+  <a href="https://www.linkedin.com/in/jose-rivera-343bb9208/">
+    <img alt="My Linkedin" src="https://img.shields.io/badge/Jose Rivera-%230077B5?style=social&logo=linkedin">
+  </a>
+  <a href="https://www.linkedin.com/in/hamza-sait-083371144/">
+    <img alt="My Linkedin" src="https://img.shields.io/badge/Hamza Sait-%230077B5?style=social&logo=linkedin">
+  </a>
+  <a href="https://www.linkedin.com/in/matthew-parker-1276221b5/">
+    <img alt="My Linkedin" src="https://img.shields.io/badge/Matt Parker-%230077B5?style=social&logo=linkedin">
+  </a>
+  <a href="https://www.linkedin.com/in/matthew-bohl-93785a127/">
+    <img alt="My Linkedin" src="https://img.shields.io/badge/Matthew Bohl-%230077B5?style=social&logo=linkedin">
+  </a>
+</p>
 
-### `npm start`
+___
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h3 align="center">
+  <a href="#information_source-about">About</a>&nbsp;|&nbsp;
+  <a href="#seedling-requirements-to-use">Requirements To Use</a>&nbsp;|&nbsp;
+  <a href="#rocket-technologies">Technologies Used</a>&nbsp;|&nbsp;
+  <a href="#link-contributing">How To Contribute</a>&nbsp;|&nbsp;
+  <a href="#license">License</a>
+</h3>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+___
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :information_source: About
 
-### `npm run build`
+We want to recreate the nostalgia of the windows XP experience with a little flair.
+You should be able to play a few classic games and enjoy the 'Helpers'
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## :seedling: Requirements To Use
+Simply Click -->
+https://xp-arcade.herokuapp.com/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## :rocket: Technologies 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The project was created using the following technologies:
 
-### `npm run eject`
+- NodeJS
+- Bootstrap
+- Handlebars
+- CSS
+- JQuery
+- Express
+- Sequelize
+- bcrypt
+- MySQL
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## :link: Contributing 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Fork the repository
+- Clone it to your local machine
+- Create a branch with your new feature
+- Add, commit, and push your changes to your branch
+- Create a pull request on this project with your branch changes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## License 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This project is using an MIT license. Click here [LICENSE](LICENSE) for more details.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Contributors
+Jose Rivera : https://github.com/sournachos  
+Matt Parker : https://github.com/mattyp1007  
+Hamza Sait : https://github.com/hamzsait  
+Matthew Bohl : https://github.com/mattjb97  

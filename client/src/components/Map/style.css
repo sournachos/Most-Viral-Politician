@@ -28,44 +28,54 @@
   border-radius: 4px;
   background-color: var(--color-light);
   text-align: center;
+  /* test */
 }
+
 #zoom-reset {
   font-size: 14px;
+  /* test */
 }
+
 .tools {
   border-bottom: 1px var(--color-dark2) solid;
   background-color: var(--color-dark);
+  /* test */
 }
 
 #zoom-in:hover {
   background-color: var(--color-red);
   color: var(--color-light);
+  /* test */
 }
 
 #zoom-out:hover {
   background-color: var(--color-blue);
   color: var(--color-light);
+  /* test */
 }
 
 #zoom-in:hover i{
   background-color: var(--color-red);
   color: var(--color-light);
+  /* test */
 }
 
 #zoom-out:hover i{
   background-color: var(--color-blue);
   color: var(--color-light);
+  /* test */
 }
-
 
 #zoom-reset:hover {
   background-color: var(--color-dark2);
   color: var(--color-light);
-}
-.zoom:hover i {
-  color: var(--color-light);
+  /* test */
 }
 
+.zoom:hover i {
+  color: var(--color-light);
+  /* test */
+}
 
 body {
   background-color: var(--color-light);
@@ -94,12 +104,14 @@ svg{
   min-width: 90vw;
   
 }
+
 g{
   position:relative;
   overflow: hidden;
   transform:translate(20%, 10% ) scale(100%);
   vertical-align: middle;
 }
+
 @media screen and (max-width:3001px) {
   g{
     transform:translate(25%, 3%)scale(100%);
@@ -168,25 +180,31 @@ g{
   border-color: rgb(108,108,108) !important;
   color: var(--color-dark) !important;
 }
+
 .modal-content {
   background-color: var(--color-dark) !important;
   color: var(--color-light);
 }
+
 .modal-header {
   border-bottom-color: var(--color-dark2) !important;
 }
+
 .modal-footer {
   border-top-color: var(--color-dark2) !important;
 }
+
 .close-btn {
   background-color: rgb(179,179,179) !important;
   color: var(--color-dark) !important;
   border-color: rgb(108,108,108) !important;
 }
+
 .close-btn:hover {
   background-color: var(--color-dark2) !important;
   color: rgb(179,179,179) !important;
 }
+
 .profile-btn:hover {
   background-color: var(--color-dark2) !important;
   color: var(--color-light) !important;
@@ -198,10 +216,12 @@ g{
   border-radius: 0.25rem !important;
   color: var(--color-light-grey) !important;
 }
+
 .close:hover {
   background-color: var(--color-dark2) !important;
   border-color: var(--color-dark2) !important;
 }
+
 svg{
   min-width: 30vw;
 }
