@@ -28,13 +28,18 @@
   border-radius: 4px;
   background-color: var(--color-light);
   text-align: center;
+  /* test */
 }
+
 #zoom-reset {
   font-size: 14px;
+  /* test */
 }
+
 .tools {
   border-bottom: 1px var(--color-dark2) solid;
   background-color: var(--color-dark);
+  /* test */
 }
 
 #zoom-in:hover {
@@ -46,6 +51,7 @@
 #zoom-out:hover {
   background-color: var(--color-blue);
   color: var(--color-light);
+  /* test */
 }
 
 #zoom-in:hover i{
@@ -57,15 +63,18 @@
 #zoom-out:hover i{
   background-color: var(--color-blue);
   color: var(--color-light);
+  /* test */
 }
 
 #zoom-reset:hover {
   background-color: var(--color-dark2);
   color: var(--color-light);
+  /* test */
 }
 
 .zoom:hover i {
   color: var(--color-light);
+  /* test */
 }
 
 body {
@@ -95,12 +104,14 @@ svg{
   min-width: 90vw;
   
 }
+
 g{
   position:relative;
   overflow: hidden;
   transform:translate(20%, 10% ) scale(100%);
   vertical-align: middle;
 }
+
 @media screen and (max-width:3001px) {
   g{
     transform:translate(25%, 3%)scale(100%);
