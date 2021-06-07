@@ -10,27 +10,50 @@ import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 function DistrModal(props) {
   return (
     <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          District {props.info._id} – {props.info.name}
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <p>
-          {props.info.party}
-        </p>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
-      </Modal.Footer>
-    </Modal>
-  );
-}
+    {...props}
+    size="lg"
+    aria-labelledby="contained-modal-title-vcenter"
+    centered
+    className="distr-modal"
+  >
+    {props.info ? ( 
+    <>
+    <Modal.Header closeButton>
+      <Modal.Title id="contained-modal-title-vcenter">
+
+        District {props.info._id} – {props.info.name}
+      </Modal.Title>
+    </Modal.Header>
+    <Modal.Body>
+      <p>
+       {props.info.party}
+      </p>
+    </Modal.Body>
+    </>
+    )
+
+    : (
+    <>
+    <Modal.Header closeButton>
+    <Modal.Title id="contained-modal-title-vcenter">
+
+    </Modal.Title>
+    <Modal.Body>
+      <p>This district does not have any data.</p>
+    </Modal.Body>
+  </Modal.Header>
+    </>)
+  }
+
+    <Modal.Footer>
+      <Button onClick={props.onHide} className="close-btn">Close</Button>
+      { props.info ? (
+        <a href={"/polprofile/"+props.info._id}><Button className="profile-btn">Profile &gt;&gt;</Button></a>
+      )
+      : <></>}
+    </Modal.Footer>
+  </Modal>
+  )}
 
 function Map(props) {
   const data = useContext(DataContext);
@@ -40,8 +63,14 @@ function Map(props) {
 
   const handleDistrClick = (e) => {
     const id = e.target.getAttribute("id");
-    const d = data[id - 1];
-    setModalData(d);
+    if(id < 6){
+      setModalData(data[id-1]);
+    } else if (id === "6") {
+      setModalData();
+    } else {
+      setModalData(data[id-2]);
+    }
+    
     setModalShow(true);
   }
 
