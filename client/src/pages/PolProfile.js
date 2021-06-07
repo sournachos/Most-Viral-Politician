@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react"
 import { Card, Container } from "react-bootstrap"
 import { useHistory, useParams } from "react-router-dom"
 import API from "../utils/API";
-import { useAuth } from "../contexts/AuthContext"
+import { useAuth } from "../contexts/AuthContext";
+import "./css/polprofile.css";
 
 export default function PolProfile() {
   const { _id } = useParams()

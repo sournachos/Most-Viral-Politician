@@ -8,10 +8,36 @@
   
 }
 
-.polName {
-  color: black;
+
+.pol-name, .pol-distr {
+  color: black !important;
 }
 
+.pol-party {
+  color: var(--color-light) !important;
+  border-radius: 5%;
+  padding: 4px 6px;
+  min-width: 110px;
+  text-align: center !important;
+}
+
+.pol-distr, .pol-party {
+  font-size: 20px;
+}
+
+a {
+  color: black !important;
+}
+
+.pol-party-Republican {
+  background-color: var(--color-red);
+}
+
+.pol-party-Democrat {
+  background-color: var(--color-blue);
+}
+
+.polD
 .list-overflow-container {
   max-height: 545px;
   border: 1px #DDDDDD solid;
