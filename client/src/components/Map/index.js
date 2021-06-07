@@ -79,13 +79,12 @@ function Map(props) {
       info={modalData}
      />
 
-     
+
   <svg src="http://www.w3.org/2000/svg" width="100%" height="100%" {...props}>
       <g
         fontSize={34.375}
         fontWeight={400}
-        fill="#fff"
-        fillRule="evenodd"
+        fill="#fff" 
         stroke="#000"
         strokeWidth={0.5}
         strokeLinecap="square"

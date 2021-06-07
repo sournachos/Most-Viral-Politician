@@ -1,20 +1,12 @@
-.react-transform-element { 
-  width: 1000px;
-  height: 1000px;
-}
-
-.react-transform-component{
-  width:100%;
-  height: 100%;
-}
 
 .map-box { 
-  /* width: "fit-content";
-  height: "fit-content"; */
+  width: 100%;
+  height:70vh;
   border: 1px solid var(--color-dark);
-  /* overflow:"auto"; */
   background-color: var(--color-light-grey);
+  overflow: hidden;
 }
+
 .map-head h5 {
   color: var(--color-light);
   font-size: 14.5px
@@ -62,5 +54,4 @@
 .zoom:hover i {
   color: var(--color-light);
 }
-
 
