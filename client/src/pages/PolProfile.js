@@ -31,17 +31,18 @@ export default function PolProfile() {
   return (
 
     <div className="container">
-      <div className=" d-flex my-4 ">
-        <div className="row">
-          <Card className="col-md-3 col-sm-4 p-2">
+
+      <div className="row">
+        <div className=" d-flex justify-content-between my-4 px-0">
+          <Card className="col-md-3 col-sm-4 p-2 pol-card1">
             <Card.Body className="text-center">
               <h2 className="text-center mb-4">{onepol.name}</h2>
-              <img style={{ width: "100%" }} src={onepol.image} />
+              <img style={{ width: "100%" }} src={onepol.image} className="pol-img" />
               {favoritePol()}
             </Card.Body>
           </Card>
 
-          <Card className=" col-md-9 col-sm-8 p-2">
+          <Card className=" col-md-8 col-sm-7 p-2">
             <Card.Body>
               <h2 className="text-center mb-4">Info</h2>
               <ul>

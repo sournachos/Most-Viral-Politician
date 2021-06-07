@@ -11,20 +11,17 @@
   --color-dark2: rgb(49, 49, 49);
   --color-light-grey: rgb(235, 235, 235);
 }
-
 .map-box { 
   width: 100%;
-  height:70vh;
   border: 1px solid var(--color-dark);
   background-color: var(--color-light-grey);
-  overflow: hidden;
+  overflow: auto;
 }
 
 .map-head h5 {
   color: var(--color-light);
   font-size: 14.5px
 }
-
 
 .zoom {
   border: 1px var(--color-dark2) solid;
@@ -90,20 +87,11 @@ body {
   fill: var(--color-blue-light);
 }
 
-.none {
-  fill: var(--color-dark);
-}
-
-.none:hover {
-  fill: var(--color-dark2);
-}
-
-
 svg{
   overflow: hidden;
   position: relative;
-  min-height: 100vh;
-  min-width: 100vw;
+  min-height: 70vh;
+  min-width: 90vw;
   
 }
 g{
@@ -116,7 +104,6 @@ g{
   g{
     transform:translate(25%, 3%)scale(100%);
     vertical-align: middle;
-    
   }
 }
 @media screen and (max-width:1901px) {
@@ -168,47 +155,61 @@ g{
     vertical-align: middle;
   }
 }
-
-.zoom {
-  border: 1px var(--color-dark2) solid;
-  border-radius: 4px;
-  background-color: var(--color-light);
-  text-align: center;
-}
-#zoom-reset {
-  font-size: 14px;
-}
-.tools {
-  border-bottom: 1px var(--color-dark2) solid;
-  background-color: var(--color-dark);
+.none {
+  fill: var(--color-dark);
 }
 
-#zoom-in:hover {
-  background-color: var(--color-red);
+.none:hover {
+  fill: var(--color-dark2);
+}
+
+.profile-btn {
+  background-color: var(--color-tan) !important;
+  border-color: rgb(108,108,108) !important;
+  color: var(--color-dark) !important;
+}
+
+.modal-content {
+  background-color: var(--color-dark) !important;
   color: var(--color-light);
 }
 
-#zoom-out:hover {
-  background-color: var(--color-blue);
-  color: var(--color-light);
+.modal-header {
+  border-bottom-color: var(--color-dark2) !important;
 }
 
-#zoom-in:hover i{
-  background-color: var(--color-red);
-  color: var(--color-light);
+.modal-footer {
+  border-top-color: var(--color-dark2) !important;
 }
 
-#zoom-out:hover i{
-  background-color: var(--color-blue);
-  color: var(--color-light);
+.close-btn {
+  background-color: rgb(179,179,179) !important;
+  color: var(--color-dark) !important;
+  border-color: rgb(108,108,108) !important;
 }
 
-
-#zoom-reset:hover {
-  background-color: var(--color-dark2);
-  color: var(--color-light);
-}
-.zoom:hover i {
-  color: var(--color-light);
+.close-btn:hover {
+  background-color: var(--color-dark2) !important;
+  color: rgb(179,179,179) !important;
 }
 
+.profile-btn:hover {
+  background-color: var(--color-dark2) !important;
+  color: var(--color-light) !important;
+}
+
+.close {
+  background-color: var(--color-dark) !important;
+  border: 2px solid var(--color-dark) !important;
+  border-radius: 0.25rem !important;
+  color: var(--color-light-grey) !important;
+}
+
+.close:hover {
+  background-color: var(--color-dark2) !important;
+  border-color: var(--color-dark2) !important;
+}
+
+svg{
+  min-width: 30vw;
+}
