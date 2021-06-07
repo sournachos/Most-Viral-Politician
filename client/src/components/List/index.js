@@ -77,7 +77,7 @@ export function ListItem({ name, image, district, party }) {
             <img className="polImg d-inline" width="100px" height="100px" src={image} />
 
           </div>
-          <div className="text-center">
+          <div className="d-flex flex-column align-items-center justify-content-center">
             <h4 className="pol-name">{name}</h4>
             <h5 className="pol-distr">District: {district}</h5>
             <h5 className={`pol-party pol-party-${party}`}>{party}</h5>
