@@ -35,12 +35,10 @@ export function ListItem({ name, image, district, party }) {
   const { currentUser } = useAuth()
   const [savedcheck, setSavedCheck] = useLocalStorage(polid, []);
 
-  //const indexCheck = () => { return savedcheck ? setCheck(true) : setCheck(false); }
-
-  //window.onload = indexCheck();
-
   const favoritePol = () => {
-    return currentUser ? <div><p className="mb-0" style={{ color: "black" }}>Watching</p><input id={polid} checked={check} onChange={handleChange} type="checkbox" className="ms-4" style={{ cursor: "copy" }}></input></div> : <></>
+   let x =  currentUser ? <div><p className="mb-0" style={{ color: "black" }}>Watching</p><input id={polid} checked={check} onChange={handleChange} type="checkbox" className="ms-4" style={{ cursor: "copy" }}></input></div> : <></>
+    x.onload = savedcheck ? setCheck(true) : setCheck(false);
+   return x;
   };
 
   const checkOff = () => {
@@ -74,7 +72,7 @@ export function ListItem({ name, image, district, party }) {
     return check ? checkOff() : checkOn()
   }
 
-
+  
 
   return (
     <li id={"d" + district} className={"list-group-item"}>
