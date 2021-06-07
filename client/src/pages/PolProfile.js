@@ -3,6 +3,7 @@ import { Card, Container } from "react-bootstrap"
 import { useHistory, useParams } from "react-router-dom"
 import API from "../utils/API";
 import { useAuth } from "../contexts/AuthContext"
+import { Graph } from "../components/Graph/index"
 
 export default function PolProfile() {
   const { _id } = useParams()
@@ -58,7 +59,7 @@ export default function PolProfile() {
         <Card.Body>
           <h2 className="text-center mb-4">Stats</h2>
 
-          {"database"}
+          <Graph trends = {onepol.trends ? onepol.trends : ''}/>
 
         </Card.Body>
       </Card>

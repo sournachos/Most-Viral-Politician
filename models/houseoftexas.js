@@ -8,6 +8,7 @@ const texas_congress = new Schema({
     url:{ type: String, required: true },
     handle:{ type: String, required: true},
   },
+  trends: {},
   facebook: { type: String, required: true },
   phone: { type: String, required: true },
   email: { type: String, required: true },
