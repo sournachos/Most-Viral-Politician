@@ -57,15 +57,14 @@
   color: var(--color-light);
 }
 
-
 #zoom-reset:hover {
   background-color: var(--color-dark2);
   color: var(--color-light);
 }
+
 .zoom:hover i {
   color: var(--color-light);
 }
-
 
 body {
   background-color: var(--color-light);
