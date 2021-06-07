@@ -1,0 +1,18 @@
+.submit-btn {
+  background-color: var(--color-light) !important;
+  border-color: rgb(108,108,108) !important;
+  color: var(--color-dark) !important;
+}
+
+.submit-btn:hover {
+  background-color: var(--color-dark2) !important;
+  color: var(--color-light) !important;
+}
+
+.login-card {
+  border: 1px solid rgba(0, 0, 0, 0.19) !important;
+}
+
+.login-card .card-body{
+  background-color: var(--color-light-grey);
+}

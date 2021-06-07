@@ -1,21 +1,29 @@
-.list-group-horizontal .list-group-item {
+.c-nav .list-group-item {
   background-color: var(--color-light) !important;
   color: var(--color-dark2) !important;
 }
 
-.list-group-horizontal .list-group-item:hover {
+.c-nav .list-group-item:hover {
   background-color: var(--color-dark2) !important;
   color: var(--color-light) !important;
 }
 
-.list-group-horizontal {
+.list-group-horizontal-sm {
   display: inline-flex !important;
 }
 
 .jumpto {
-  color: var(--color-dark2)
+  color: var(--color-dark2);
 }
+
 
 .c-nav-parent .card {
   width:fit-content !important;
+}
+
+@media screen and (max-width:576px) {
+  .jumpto {
+    display: block !important;
+    margin-bottom: 16px;
+  }
 }
